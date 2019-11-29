@@ -1,15 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
   <section class="cajadelogin" id="@php
    $id=chr(rand(ord("a"), ord("s")));
    echo $id;
   @endphp" >
-=======
-  <section class="cajadelogin" >
-
->>>>>>> 81ca7526de5e269872d9b1357eba336f807f32d8
     <article class="login">
       <h1 class="titulog2">Sloth</h1>
 

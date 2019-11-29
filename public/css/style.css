@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 0;
 }
+.bar{
+  background-color: inherit;
+}
 body{
   max-width: 1600px;
 }
