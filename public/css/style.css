@@ -535,10 +535,11 @@ font-size: 1.3rem;
 
 
 .navbarpreg{
-  position: fixed;
+  position: absolute;
   height: 56px;
   width: 100vw;
   background-color:#7d5bb9;
+  float: left;
 
 }
 .iconospreg{

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('index', function () {
     return view('welcome');
 });
 Route::get('user/','userController@listaUser');
@@ -19,3 +19,7 @@ Route::get('user/','userController@listaUser');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('publicacion/',function(){
+  return view('posteos');
+});
+Route::post('publicacion/','postController@agregarPost');

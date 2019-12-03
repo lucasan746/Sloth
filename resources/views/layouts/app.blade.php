@@ -74,15 +74,14 @@
                 </div>
             </div>
         </nav> --}}
-        <nav class="navbarpreg">
+        <nav class="navbarpreg container col-12">
           <div class="iconospreg">
-            <a href="index.php">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
+            <a href="">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
         @guest
           @if (Route::has('register'))
-            <a class="botoninic-p" href="login.php">Inicia Sesion</a>
-            <script type="text/javascript">
-              let barra = document.getElementsByClassName('navbarpreg')
-              barra.setAttribute("class","bar")
+            <a class="botoninic-p col-3" href="{{route('register')}}">Inicia Sesion</a>
+            <script type="application/javascript">
+            getElementsByClassName('navbarpreg').setAttribute("class","barralog")
             </script>
           @endif
           @else
@@ -105,7 +104,7 @@
         @endguest
             </div>
         </nav>
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

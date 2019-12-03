@@ -12,8 +12,8 @@
         @csrf
         {{-- usuario --}}
         <label class="errorlogin1" for="email"{{ __('E-Mail Address') }}></label>
-        <input class="inputusua form-control @error('email') is-invalid @enderror"type="email" name="email" placeholder="Nombre de usuario" value="{{ old('email') }}" required autocomplete="email" autofocus>
-        @error('email')
+        <input class="inputusua form-control @error('login') is-invalid @enderror"type="login" name="login" placeholder="Nombre de usuario" value="{{ old('login') }}" required autocomplete="login" autofocus>
+        @error('login')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>

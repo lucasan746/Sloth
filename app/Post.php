@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public $table->"post";
-    public $guarded->[];
+    public $table="post";
+    public $guarded=[];
 
     public function user()
     {
