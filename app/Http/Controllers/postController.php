@@ -7,12 +7,7 @@ use App\Post;
 
 class postController extends Controller
 {
-    function listaPost()
-    {
-      $posteos=Post::all();
-      $vac=compact('posteos');
-      return view ('posteos',$vac);
-    }
+    
     function agregarPost(request $form)
     {
 

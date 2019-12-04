@@ -7,20 +7,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-
-// class User extends Model
-// {
-//     public $table="users";
-//     public $guarded=[];
-//     public function mascotas()
-//     {
-//       return $this->hasMany('App\Mascotas','user_id');
-//     }
-//     public function post()
-//     {
-//       return $this->hasMany('App\Post','user_id');
-//     }
-// }
 class User extends Authenticatable
 {
     use Notifiable;
