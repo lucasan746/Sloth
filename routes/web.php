@@ -17,8 +17,15 @@ Route::get('index', function () {
 Route::get('user/','userController@listaUser');
 
 Auth::routes();
+<<<<<<< HEAD
 
 Route::get('/home', 'HomeController@listaPost')->name('home');
+=======
+Route::get('preguntas', function () {
+    return view('faq');
+});
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> e3d47c75b7220c766ed9b03ecd514712e102fe90
 Route::get('publicacion/',function(){
   return view('posteos');
 });
