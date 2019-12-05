@@ -86,7 +86,7 @@
             </script>
   @endif
           @if (Route::has('login'))
-            <a class="botoninic-p col-3" href="{{route('register')}}">Inicia sesión</a>
+            <a class="botoninic-p col-3" href="{{route('login')}}">Inicia sesión</a>
             <script type="application/javascript">
             getElementsByClassName('navbarpreg').setAttribute("class","barralog")
             </script>
