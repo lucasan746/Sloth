@@ -22,8 +22,13 @@ Route::get('preguntas', function () {
 });
 Route::get('/home', 'HomeController@listaPost')->name('home');
 
-
 Route::get('publicacion/',function(){
   return view('posteos');
 });
+
 Route::post('publicacion/','postController@agregarPost');
+
+Route::get('perfil/','userController@usuario');
+Route::get('perfil/{id}','userController@seguir');
+Route::post('follow','seguirController@seguir');
+Route::post('unfollow','seguirController@dejarSeguir');

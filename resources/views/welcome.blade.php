@@ -1,3 +1,7 @@
+@php
+$videos=["video/gatos.mp4","video/peces.mp4","video/perezoso.mp4","video/perros.mp4"];
+$vidalea=rand(0,3);
+@endphp
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -15,7 +19,9 @@
       <section class="cajadelogin">
       <a href="{{ url('/index') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoprin"></a>
       <article class="artilogin">
-
+        <video autoplay muted loop id="myVideo">
+          <source src="{{$videos[$vidalea]}}" type="video/mp4">
+        </video>
         <div class="vid">
         <h1 class="titulog">Sloth</h1>
         <h3>Un espacio para tu mascota</h3>

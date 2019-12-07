@@ -28,7 +28,7 @@
     <article class="login">
       <h1 class="titulog2">Sloth</h1>
 
-      <form class="iniciases" action="{{ route('login') }}" method="post">
+      <form class="iniciases" action="{{ route('login') }}" method="post"  enctype="multipart/form-data">
         @csrf
         {{-- usuario --}}
         <label class="errorlogin1" for="email"{{ __('E-Mail Address') }}></label>

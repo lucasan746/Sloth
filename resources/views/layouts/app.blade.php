@@ -1,3 +1,7 @@
+@php
+  session_start();
+  $_SESSION["user"]="ñucas";
+@endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -79,19 +83,13 @@
           <div class="iconospreg">
             <a href="">  <img class="iconoprin" src="images/icon-lazy.png" alt=""></a>
         @guest
-          @if (Route::has('login'))
-            <a class=" botoninic-p " role="button" href="{{route('register')}}">Registrate</a>
-            <script type="application/javascript">
+          @if (Route::has('logear'))
+            <a class="botoninic-p col-3" href="{{route('register')}}">Registrate</a>
+            {{-- <script type="application/javascript">
             getElementsByClassName('navbarpreg').setAttribute("class","barralog")
-            </script>
-
-@if (Route::has('register'))
-            <a class="botoninic-p " role="button" href="{{route('login')}}">Inicia sesión</a>
-            <script type="application/javascript">
-            getElementsByClassName('navbarpreg').setAttribute("class","barralog")
-            </script>
-@endif
-@endif
+            </script> --}}
+          @endif
+          {{--  --}}
             @else
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
