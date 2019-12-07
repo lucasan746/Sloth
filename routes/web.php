@@ -22,9 +22,11 @@ Route::get('/home', 'HomeController@listaPost')->name('home');
 Route::get('preguntas', function () {
     return view('faq');
 });
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('publicacion/',function(){
   return view('posteos');
 });
+
 Route::post('publicacion/','postController@agregarPost');
+
+Route::get('perfil/','userController@usuario');
