@@ -1,3 +1,7 @@
+@php
+  session_start();
+  $_SESSION["user"]="ñucas";
+@endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -18,6 +22,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather|Montserrat&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -78,13 +83,14 @@
           <div class="iconospreg">
             <a href="">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
         @guest
-          @if (Route::has('register'))
-            <a class="botoninic-p col-3" href="{{route('register')}}">Inicia Sesion</a>
-            <script type="application/javascript">
+          @if (Route::has('logear'))
+            <a class="botoninic-p col-3" href="{{route('register')}}">Registrate</a>
+            {{-- <script type="application/javascript">
             getElementsByClassName('navbarpreg').setAttribute("class","barralog")
-            </script>
+            </script> --}}
           @endif
-          @else
+          {{--  --}}
+            @else
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>

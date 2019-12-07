@@ -18,4 +18,10 @@ class userController extends Controller
     $vac=compact('user');
     return view ('perfil',$vac);
   }
+  function seguir($id)
+  {
+    $perfil=User::find($id);
+    $vac=compact('perfil');
+    return view ('perfil',$vac);
+  }
 }
