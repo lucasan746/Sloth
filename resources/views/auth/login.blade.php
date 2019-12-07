@@ -1,6 +1,26 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather|Montserrat&display=swap" rel="stylesheet">
 
-@section('content')
+    <title>Registro</title>
+  </head>
+<body class="fondooscuro" id="@php
+ $id=chr(rand(ord("a"), ord("s")));
+ echo $id;
+@endphp">
+    <header>
+      <nav class="nav-forms">
+        <a href="{{ url('/index') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoreg"></a>
+          <a class="botoninic-p btn" role="button" href="{{ url('/register') }}">Registrate</a>
+      </nav>
+    </header>
+
   <section class="cajadelogin" id="@php
    $id=chr(rand(ord("a"), ord("s")));
    echo $id;
@@ -33,8 +53,9 @@
         <label class="recuerda" for="recordarus">Recordar Usuario</label>
         <input class="inputrecuerda"type="checkbox" name="remenber" {{ old('remember') ? 'checked' : '' }}>
 
-        <button type="submit" name="enviar" class="botonlog">Iniciar Sesión</button>
+        <button type="submit" name="enviar" class="botonlog btn">Iniciar sesión</button>
       </form>
     </article>
   </section>
-@endsection
+</body>
+</html>

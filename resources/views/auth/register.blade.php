@@ -1,17 +1,34 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather|Montserrat&display=swap" rel="stylesheet">
 
-@section('content')
-<section class="cajadelogin" id="@php
+    <title>Registro</title>
+  </head>
+<body class="fondooscuro" id="@php
  $id=chr(rand(ord("a"), ord("s")));
  echo $id;
-@endphp" >
+@endphp">
+    <header>
+      <nav class="nav-forms">
+        <a href="{{ url('/index') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoreg"></a>
+          <a class="botoninic-p btn" role="button" href="{{ url('/login') }}">Iniciar sesión</a>
+      </nav>
+    </header>
+
+<section class="cajareg"  >
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 mt-4">
-            <div class="card">
+        <div class="col-md-6 mt-5">
+            <div class="card mt-3">
                 <div class="card-header">{{ __('Tus datos') }}</div>
 
-                <div class="card-body">
+                <div class="card-body ">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -159,4 +176,8 @@
         </div>
     </div>
 </div>
-@endsection
+
+
+</section>
+</body>
+</html>

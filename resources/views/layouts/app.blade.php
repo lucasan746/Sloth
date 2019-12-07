@@ -79,9 +79,9 @@
                 </div>
             </div>
         </nav> --}}
-        <nav class="navbarpreg container col-12">
+        <nav class="navbarpreg container col-12 ">
           <div class="iconospreg">
-            <a href="">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
+            <a href="">  <img class="iconoprin" src="images/icon-lazy.png" alt=""></a>
         @guest
           @if (Route::has('logear'))
             <a class="botoninic-p col-3" href="{{route('register')}}">Registrate</a>

@@ -29,6 +29,7 @@ body{
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.30);
 
+
 }
 .cajalogin3{
   /* background-color: rgb(110, 193, 201); */
@@ -39,9 +40,12 @@ body{
 .cajadelogin{
   /* background-color: rgb(110, 193, 201); */
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.30);
-
+    background-color: rgba(0, 0, 0, 0.30);
 }
+.fondooscuro{
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
 .vid{
   color: white;
   position: relaive;
@@ -71,7 +75,7 @@ body{
   padding: 10px;
   border-radius: 3%;
   font-family: 'Lato', sans-serif;
-  border: solid 1px #5536b6;
+
 }
   .botonlog:hover{
     color: #ffffff;
@@ -106,9 +110,9 @@ body{
       /* padding-left: 40%; */
       flex-wrap: nowrap;
     }
-    /* .container{
+    .container-index{
       background-color: #7c5cff;
-    } */
+    }
 
 
 
@@ -116,11 +120,11 @@ body{
       margin: 0;
       margin-top: 10px;
       margin-right: 1%;
-      border: solid 1px rgba(0, 0, 0, 0.1);
+
       display: block;
       text-decoration: none;
       color: white;
-      font-size: 93%;
+      
       background-color: rgba(0, 0, 0, 0.5);
       width: 10%;
       height: 6vh;
@@ -259,14 +263,14 @@ body{
 
 
 /* Preguntas y respuestas */
-.container h1{
+.container-index h1{
   font-size: 2.7rem;
   color: white;
   margin-bottom: 5%;
   font-family: 'Merriweather', serif;
 
 }
-.container p{
+.container-index p{
   font-size: 1.5rem;
   color: white;
   font-family: 'Lato', sans-serif;
@@ -538,7 +542,7 @@ font-size: 1.3rem;
   position: absolute;
   height: 56px;
   width: 100vw;
-  background-color:#7d5bb9;
+  /* background-color:#7d5bb9; */
   float: left;
 
 }
@@ -585,20 +589,22 @@ left: 30%;
 }
 .botoninic-p{
   text-align: center;
-  width: 8%;
-  height: 5vh;
-  padding: 6px;
+
+  height: 40px;
+  padding: 7px;
   text-decoration: none;
   position: absolute;
-  left: 90%;
-  top: 10px;
-  background-color: #6745d0c4;
+  right: 15px;
+  top: 15px;
+  background-color:#744fe7;
   color: white;
-  border: solid 1px #a7aece;
+
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   border-radius: 5%;
 }
+
+
 .titufrec{
   background-color: #7d5bb9;
 padding: 8%;
@@ -644,6 +650,9 @@ font-family: 'Montserrat', sans-serif;
   position: relative;
   top: 20vh;
   width: 20vw;
+  font-family: 'Lato', sans-serif;
+  color:white;
+  line-height: 1;
 }
 .inputusua{
   width: 100%;
@@ -677,6 +686,20 @@ font-family: 'Montserrat', sans-serif;
 /* fin */
 
 /* Formularios de registros  */
+.iconoreg{
+  position: absolute;
+  width: 56px;
+  left: 10px;
+  top: 7px;
+  border-radius: 30%;
+}
+.nav-forms{
+  position: relative;
+
+}
+.cajareg{
+  height: 100vh;
+}
 .botoninic{
   text-align: center;
   width: 8%;

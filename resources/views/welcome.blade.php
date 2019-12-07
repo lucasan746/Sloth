@@ -5,6 +5,7 @@ $vidalea=rand(0,3);
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
+        <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport"
     content="width=device-width, initial-scale=1">
@@ -24,21 +25,20 @@ $vidalea=rand(0,3);
         <div class="vid">
         <h1 class="titulog">Sloth</h1>
         <h3>Un espacio para tu mascota</h3>
-        <a class="botonlog" href="{{ url('/register') }}">Registrarse</a>
-        <a class="botonlog2" href="{{ url('/login') }}">Iniciar Sesión</a>
+        <a class="botonlog btn" role="button" href="{{ url('/register') }}">Registrarse</a>
+        <a class="botonlog2 btn" role="button" href="{{ url('/login') }}">Iniciar sesión</a>
       </div>
       </article>
       <a href="#ancla"><img src="images/flecha2.png" alt="flecha" class="flecha"></a>
     </section>
-    <div class="container">
+    <div class="container-index">
     <div class="barramenu">
-      <a href="login.php" name="ancla" class="botonlog3">Inicia Sesión</a>
-      <a href="registro.php" class="botonlog4">Registrate</a>
+      <a href="{{ url('/login') }}" name="ancla" role="button" class="botonlog3 btn">Inicia sesión</a>
+      <a href="{{ url('/register') }}" role="button" class="botonlog4 btn">Registrate</a>
     </div>
     <!-- fin -->
       <!-- Preguntas y respuestas -->
 <section class="preg1">
-
 
   <article class="contenido1">
 <div class="media1 imagenesres">
