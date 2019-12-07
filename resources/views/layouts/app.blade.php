@@ -75,23 +75,23 @@
                 </div>
             </div>
         </nav> --}}
-        <nav class="navbarpreg container col-12">
+        <nav class="navbarpreg container col-12 ">
           <div class="iconospreg">
-            <a href="">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
+            <a href="">  <img class="iconoprin" src="images/icon-lazy.png" alt=""></a>
         @guest
-          @if (Route::has('register'))
-            <a class="botoninic-p col-3" href="{{route('register')}}">Registrate</a>
-            <script type="application/javascript">
-            getElementsByClassName('navbarpreg').setAttribute("class","barralog")
-            </script>
-  @endif
           @if (Route::has('login'))
-            <a class="botoninic-p col-3" href="{{route('login')}}">Inicia sesión</a>
+            <a class=" botoninic-p " role="button" href="{{route('register')}}">Registrate</a>
             <script type="application/javascript">
             getElementsByClassName('navbarpreg').setAttribute("class","barralog")
             </script>
 
-  @endif
+@if (Route::has('register'))
+            <a class="botoninic-p " role="button" href="{{route('login')}}">Inicia sesión</a>
+            <script type="application/javascript">
+            getElementsByClassName('navbarpreg').setAttribute("class","barralog")
+            </script>
+@endif
+@endif
             @else
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
