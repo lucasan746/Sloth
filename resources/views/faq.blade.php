@@ -12,7 +12,7 @@
     <nav class="navbarpreg">
       <div class="iconospreg">
 
-<a href="{{ url('/index') }}">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
+<a href="{{ url('/') }}">  <img class="logopreg" src="images/icon-lazy.png" alt=""></a>
 
       <ul class="listanav">
         <li class="linkpreg1"><a href="#">Centro de ayuda</a></li>
@@ -22,7 +22,7 @@
       <form class="" action="#" method="get">
         <input type="text" name="buscar" class="buscar-p" placeholder="Busqueda">
       </form>
-      <a class="botoninic-p" href="{{ url('/login') }}">Inicia Sesion</a>
+      <a class="botoninic-p" href="{{ url('/login') }}">Inicia sesión</a>
         </div>
     </nav>
       </header>

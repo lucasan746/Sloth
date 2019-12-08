@@ -16,8 +16,8 @@
 @endphp">
     <header>
       <nav class="nav-forms">
-        <a href="{{ url('/index') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoreg"></a>
-          <a class="botoninic-p btn" role="button" href="{{ url('/register') }}">Registrate</a>
+        <a href="{{ url('/') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoreg"></a>
+          <a class="boton-form btn" role="button" href="{{ url('/register') }}">Registrate</a>
       </nav>
     </header>
 

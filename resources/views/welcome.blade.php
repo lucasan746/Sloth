@@ -17,7 +17,7 @@ $vidalea=rand(0,3);
     <!-- Menu de registro -->
 
       <section class="cajadelogin">
-      <a href="{{ url('/index') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoprin"></a>
+      <a href="{{ url('/') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoprin"></a>
       <article class="artilogin">
         <video autoplay muted loop id="myVideo">
           <source src="{{$videos[$vidalea]}}" type="video/mp4">
