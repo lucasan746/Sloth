@@ -62,7 +62,7 @@
                             <label for="usuario" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
 
                             <div class="col-md-6">
-                                <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuari" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+                                <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
 
                                 @error('usuario')
                                     <span class="invalid-feedback" role="alert">
@@ -90,7 +90,7 @@
                             <label for="contraseña" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
                             <div class="col-md-6">
-                                <input id="contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="contraseña" required autocomplete="contraseña">
+                                <input id="contraseña" type="password" class="form-control @error('contraseña') is-invalid @enderror" name="contraseña" required autocomplete="contraseña">
 
                                 @error('contraseña')
                                     <span class="invalid-feedback" role="alert">
@@ -105,54 +105,85 @@
 
                             <div class="col-md-6">
                                 <input id="confcontra" type="password" class="form-control" name="confcontra" required autocomplete="confcontra">
+                                @error('confcontra')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
+
+
                         <div class="btn-group" role="group" aria-label="Basic example">
-                        <label for="confcontra" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
-                       <div class=""> <button type="button" class="btn btn-secondary">Hombre</button> </div>
+                        <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
+                       <div class=""> <button type="button" name"h" class="btn btn-secondary">Hombre</button> </div>
 
                         <div class=""><button type="button" class="btn btn-secondary">Mujer</button> </div>
 
                         <div class=""><button type="button" class="btn btn-secondary">Otro</button> </div>
                          </div>
 
-
                          <div class="row">
 
-                         <div class="input-group col-lg-4">
-                           <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                             <option selected>Dia</option>
+
+                           {{-- FECHA --}}
+                 <div class="input-group col-lg-4">
+                 <select class="custom-select @error('dia') is-invalid @enderror" id="inputGroupSelect04" aria-label="Example select with button addon" name="dia">
+                             <option selected value="">Dia</option>
                              <option value="1">One</option>
                              <option value="2">Two</option>
                              <option value="3">Three</option>
                            </select>
+                           @error('dia')
+                               <span class="invalid-feedback" role="alert">
+                                   <strong>{{ $message }}</strong>
+                               </span>
+                           @enderror
                          </div>
 
-                       <div class="input-group col-lg-4">
-                         <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                <div class="input-group col-lg-4">
+                <select class="custom-select @error('mes') is-invalid @enderror" id="inputGroupSelect04" aria-label="Example select with button addon" name="mes">
                            <option selected>Mes</option>
                            <option value="1">One</option>
                            <option value="2">Two</option>
                            <option value="3">Three</option>
                          </select>
+                         @error('mes')
+                             <span class="invalid-feedback" role="alert">
+                                 <strong>{{ $message }}</strong>
+                             </span>
+                         @enderror
                        </div>
 
-                     <div class="input-group col-lg-4">
-                       <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+               <div class="input-group col-lg-4">
+               <select class="custom-select @error('año') is-invalid @enderror" id="inputGroupSelect04" aria-label="Example select with button addon" name="año">
                          <option selected>Año</option>
                          <option value="1">One</option>
                          <option value="2">Two</option>
                          <option value="3">Three</option>
                        </select>
+                       @error('año')
+                           <span class="invalid-feedback" role="alert">
+                               <strong>{{ $message }}</strong>
+                           </span>
+                       @enderror
                      </div>
-                     <div class="input-group col-lg-8">
-                       <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                         <option selected>Pais</option>
+                     {{-- PAIS --}}
+              <div class="input-group col-lg-8">
+              <select class="custom-select @error('pais') is-invalid @enderror" id="inputGroupSelect04" aria-label="Example select with button addon" name="pais">
+                         <option selected value="">Pais</option>
                          <option value="1">One</option>
                          <option value="2">Two</option>
                          <option value="3">Three</option>
                        </select>
+                       @error('pais')
+                           <span class="invalid-feedback" role="alert">
+                               <strong>{{ $message }}</strong>
+                           </span>
+                       @enderror
                      </div>
+
+             {{-- INPUT IMAGEN --}}
                      <div class="input-group">
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
