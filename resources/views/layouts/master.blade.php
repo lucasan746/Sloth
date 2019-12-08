@@ -9,7 +9,8 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="{{route('home')}}"><img src="../images/icon-lazy.png" alt="iconoprincipal" class="logohome"></a>
+        <a href="{{route('home')}}"> <img src="../images/icon-lazy.png" alt="iconoprincipal" class="logohome"></a>
+
           <div class="iconosderecha">
 
             <form class="" action="{{route('usuarios')}}" method="get" enctype="multipart/form-data">
@@ -18,11 +19,12 @@
               <button type="submit" name="button" hidden >buscar!</button>
 
             </form>
+             <a href="#"><img src="../images/iconos/usuario.png" alt="solicitudes" class="icon-solicitud"></a>
+          <a href="#"><img src="../images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje"></a>
+              <a href="#">  <img src="../images/iconos/notificacion.png" alt="notificaciones" class="icon-notif"></a>
+            <a href="#"><img src="../images/iconos/ajustes.png" alt="grupos" class="icon-config"></a>
 
-              <img src="../images/iconos/usuario.png" alt="solicitudes" class="icon-solicitud">
-              <img src="../images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje">
-              <img src="../images/iconos/notificacion.png" alt="notificaciones" class="icon-notif">
-              <img src="../images/iconos/ajustes.png" alt="grupos" class="icon-config">
+              <a href="{{ route('posteo') }}"><img src="/storage/{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="icon-foto"></a>
               <a href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();"><img src="../images/iconos/outblanco.png" alt="ajustes" class="icon-cierre"></a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

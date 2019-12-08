@@ -58,6 +58,8 @@
   {{-- Seccion izquierda--}}
   <section class="seccionder">
     <div class="perfilderecha">
+      <img src="/storage/{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="fotoperfilderecha">
+      <h4>{{Auth::user()->user}}</h4>
     </div>
     <article class="sugeridos">
       <h4 class="titusugeridos">Sugeridos para ti</h4>

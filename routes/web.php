@@ -26,7 +26,7 @@ Route::get('publicacion/',function(){
   return view('posteos');
 })->middleware('auth');
 
-Route::post('publicacion/','postController@agregarPost')->middleware('auth');
+Route::post('publicacion/','postController@agregarPost')->name('posteo')->middleware('auth');
 Route::get('perfil/{id}','userController@seguir')->middleware('auth');
 Route::post('follow','seguirController@seguir')->middleware('auth');
 Route::post('unfollow','seguirController@dejarSeguir')->middleware('auth');
