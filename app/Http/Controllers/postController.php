@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -21,6 +20,8 @@ class postController extends Controller
       $nuevoPost->imagenVideo=$image;
       $nuevoPost->user_id=$form["id"];
       $nuevoPost->save();
+      return redirect('perfil/'.$form["id"]);
+
     }
 
 }

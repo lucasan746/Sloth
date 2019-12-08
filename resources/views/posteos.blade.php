@@ -10,7 +10,7 @@
       <label for="img">Sube una foto o video</label>
       <input type="file" name="media" value="">
       <br>
-      <input type="hidden" name="id" value="1">
+      <input type="hidden" name="id" value="{{Auth::user()->id}}">
       <button type="submit" name="button">Publicar!</button>
     </form>
 @endsection

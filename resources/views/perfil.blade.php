@@ -22,7 +22,18 @@
 @endif
 @endforeach
 @if (Auth::user()->id===$perfil->id)
-<h3>Bienvenido a tu perfil</h3>
+  <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
+    {{csrf_field()}}
+    <label for="text">Que quieres compartir?</label>
+    <br>
+    <textarea name="text" rows="8" cols="80"></textarea>
+    <br>
+    <label for="img">Sube una foto o video</label>
+    <input type="file" name="media" value="">
+    <br>
+    <input type="hidden" name="id" value="{{Auth::user()->id}}">
+    <button type="submit" name="button">Publicar!</button>
+  </form>
 @else
   @if (isset($follow))
     <p>Ya sigues a este usuario</p>
