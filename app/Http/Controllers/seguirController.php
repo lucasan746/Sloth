@@ -13,11 +13,12 @@ class seguirController extends Controller
       $follow->user_id=$form["id_user"];
       $follow->amigo=$form["seguir"];
       $follow->save();
-      // return view('perfil');
+      return redirect('perfil/'.$form["seguir"]);
     }
     function dejarSeguir(request $form)
     {
       $unfollow=Amigos::find($form["id_amigo"]);
       $unfollow->delete();
+      return redirect('perfil/'.$form["seguir"]);
     }
 }

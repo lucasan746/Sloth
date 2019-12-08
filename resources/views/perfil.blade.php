@@ -26,6 +26,7 @@
   <form class="" action="/unfollow" method="post"  enctype="multipart/form-data">
     @csrf
     <input type="hidden" name="id_amigo" value="{{$follow}}">
+    <input type="hidden" name="seguir" value="{{$perfil->id}}">
     <button type="submit" name="button">Dejar de seguir</button>
   </form>
   @else

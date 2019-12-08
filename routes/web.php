@@ -32,3 +32,4 @@ Route::get('perfil/','userController@usuario');
 Route::get('perfil/{id}','userController@seguir');
 Route::post('follow','seguirController@seguir');
 Route::post('unfollow','seguirController@dejarSeguir');
+Route::get('/users', 'userController@search')->name('usuarios');
