@@ -10,10 +10,7 @@
 
     <title>Login</title>
   </head>
-<body class="fondooscuro" id="@php
- $id=chr(rand(ord("a"), ord("s")));
- echo $id;
-@endphp">
+<body class="fondooscuro" id="">
     <header>
       <nav class="nav-forms">
         <a href="{{ url('/') }}"><img src="images/icon-lazy.png" alt="icono"  class="iconoreg"></a>
@@ -31,8 +28,8 @@
       <form class="iniciases" action="{{ route('login') }}" method="post"  enctype="multipart/form-data">
         @csrf
         {{-- usuario --}}
-        <label class="errorlogin1" for="email"{{ __('E-Mail Address') }}></label>
-        <input class="inputusua form-control @error('login') is-invalid @enderror"type="login" name="login" placeholder="Nombre de usuario" value="{{ old('login') }}" required autocomplete="login" autofocus>
+        <label class="errorlogin1" for='login'></label>
+        <input class="inputusua form-control @error('login') is-invalid @enderror"type="login" name='login' placeholder="Nombre de usuario" value="{{ old('login') }}" required autocomplete="login" autofocus>
         @error('login')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -40,7 +37,7 @@
         @enderror
 
         {{-- contraseña --}}
-        <label class="errorlogin2" for="Contraseña"></label>
+        <label class="errorlogin2" for="password"></label>
         <input class="inputcontra @error('password') is-invalid @enderror" type="password" name="password" placeholder="Contraseña" required autocomplete="current-password">
         @error('password')
               <span class="invalid-feedback" role="alert">

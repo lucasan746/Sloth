@@ -23,7 +23,7 @@ class CreateUserTable extends Migration
             $table->string('sexo',1);
             $table->string('pais',100);
             $table->string('fotoperfil',100);
-            $table->string('contraseña',100);
+            $table->string('password',100);
             $table->string('fecha',100);
         });
     }

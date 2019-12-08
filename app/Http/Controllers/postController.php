@@ -7,7 +7,7 @@ use App\Post;
 
 class postController extends Controller
 {
-    
+
     function agregarPost(request $form)
     {
 
@@ -19,4 +19,5 @@ class postController extends Controller
       $nuevoPost->user_id=$form["id"];
       $nuevoPost->save();
     }
+    
 }
