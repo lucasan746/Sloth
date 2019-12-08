@@ -52,16 +52,19 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'nombre'=>['required','string','max:255'],
             'apellido'=>['required','string','max:255'],
-            'usuario' => ['required', 'string', 'max:255'],
+            'user' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'contraseña' => ['required', 'string', 'min:8', 'confirmed'],
             'contraseña_confirmation'=>['required_with:contraseña|same:contraseña|min:8'],
+            'sexo' => ['required','string'],
             'pais'=>['required','string','max:3'],
             'dia'=>['required','integer'],
             'mes'=>['required','integer'],
             'año'=>['required','integer'],
-
+            'fotoperfil'=>['required','file','image'],
         ]);
+
+      $this->validate($data);
     }
 
     /**
@@ -73,13 +76,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
       $request=request();
-      $ruta=$request->file('fotoperfil');
+      $ruta=$request->file('fotoperfil')->store('public');
       $image=basename($ruta);
       $fecha=$data['dia']."/".$data['mes']."/".$data["año"];
         return User::create([
             'nombre' => $data['nombre'],
             'apellido'=>$data['apellido'],
-            'user'=>$data['usuario'],
+            'user'=>$data['user'],
             'sexo'=>$data['sexo'],
             'email' => $data['email'],
             'password' => Hash::make($data['contraseña']),

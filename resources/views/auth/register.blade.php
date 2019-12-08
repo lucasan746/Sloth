@@ -71,10 +71,10 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
     <div class="row justify-content-center">
         <div class="col-md-6 cardreg">
             <div class="card mt-3">
-                <h5 class="card-header col-md-12">{{ __('Completa tus datos') }}</h5>
+                <h5 class="card-header col-md-12">{{ __('Unete a Sloth!') }}</h5>
 
                 <div class="card-body  ">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 <div class="row justify-content-around">
 
@@ -112,9 +112,9 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                             <label for="usuario" class="col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
 
 
-                                <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+                                <input id="user" type="text" class="form-control @error('usuario') is-invalid @enderror" name="user" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
 
-                                @error('usuario')
+                                @error('user')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -217,14 +217,14 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
 
                      <div class="input-group">
   <div class="custom-file divfotoreg">
-    <input type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es">
+    <input type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es" required>
     <label class="custom-file-label" for="sube foto">Sube una foto tuya o de tu mascota</label>
   </div>
 
 </div>
                           </div>
                         <div class="form-group row ">
-                            <div class="col-md-9">
+                            <div class="col-md-6">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block botonform">
                                     {{ __('Registrate') }}
                                 </button>

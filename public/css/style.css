@@ -720,6 +720,7 @@ font-family: 'Montserrat', sans-serif;
   background-color: #8665ed;
   color: white;
   padding: 15px;
+  font-size: 1.5rem;
 }
 .cardreg{
   margin-top: 4rem;
@@ -744,12 +745,21 @@ font-family: 'Montserrat', sans-serif;
 background-color: #a7aece;
   border-color:#a7aece;
 }
+.form-control{
+  height: 32px;
+border-color:#c9bcf3;
+}
 .form-control:focus{
     border-color:#603cd0;
+}
+.custom-select{
+  height: 32px;
+  border-color:#c9bcf3;
 }
 .custom-select:focus{
   border-color:#603cd0;
 }
+
 .custom-file-input:focus{
   border-color:#603cd0;
 }
