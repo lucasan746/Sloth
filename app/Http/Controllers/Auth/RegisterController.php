@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -56,9 +57,9 @@ class RegisterController extends Controller
             'contraseña' => ['required', 'string', 'min:8', 'confirmed'],
             'contraseña_confirmation'=>['required_with:contraseña|same:contraseña|min:8'],
             'pais'=>['required','string','max:3'],
-            'dia'=>['required'],
-            'mes'=>['required'],
-            'año'=>['required'],
+            'dia'=>['required','integer'],
+            'mes'=>['required','integer'],
+            'año'=>['required','integer'],
 
         ]);
     }
@@ -81,7 +82,7 @@ class RegisterController extends Controller
             'user'=>$data['usuario'],
             'sexo'=>$data['sexo'],
             'email' => $data['email'],
-            'contraseña' => Hash::make($data['contraseña']),
+            'password' => Hash::make($data['contraseña']),
             'pais'=> $data["pais"],
             'fotoperfil'=>$image,
             'fecha'=>$fecha
