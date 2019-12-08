@@ -2,7 +2,7 @@
 
 @section('content')
   {{-- Perfil amigo --}}
-<img src="{{ $perfil->fotoperfil }}" alt="fotodeperfil">
+<img src="/storage/{{ $perfil->fotoperfil }}" alt="fotodeperfil">
 <h1>Nombre de usuario: {{ $perfil->user }}</h1>
 <h2>Email: {{$perfil->email}}</h2>
 {{-- Seguir usuarios --}}
