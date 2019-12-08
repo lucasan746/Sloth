@@ -23,7 +23,11 @@
               <img src="../images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje">
               <img src="../images/iconos/notificacion.png" alt="notificaciones" class="icon-notif">
               <img src="../images/iconos/ajustes.png" alt="grupos" class="icon-config">
-              <a href="finsesion.php"><img src="../images/iconos/outblanco.png" alt="ajustes" class="icon-cierre"></a>
+              <a href="{{ route('logout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();"><img src="../images/iconos/outblanco.png" alt="ajustes" class="icon-cierre"></a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
 
           </div>
       </nav>
