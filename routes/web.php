@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('index', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 Route::get('user/','userController@listaUser');
@@ -27,9 +27,7 @@ Route::get('publicacion/',function(){
 });
 
 Route::post('publicacion/','postController@agregarPost');
-
-Route::get('perfil/','userController@usuario');
 Route::get('perfil/{id}','userController@seguir');
 Route::post('follow','seguirController@seguir');
 Route::post('unfollow','seguirController@dejarSeguir');
-Route::get('/users', 'userController@search')->name('usuarios');
+Route::get('users', 'userController@search')->name('usuarios');
