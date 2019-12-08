@@ -71,7 +71,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
     <div class="row justify-content-center">
         <div class="col-md-6 cardreg">
             <div class="card mt-3">
-                <h5 class="card-header col-md-12">{{ __('Completa tus datos') }}</h5>
+                <h5 class="card-header col-md-12">{{ __('Unete a Sloth!') }}</h5>
 
                 <div class="card-body  ">
                     <form method="POST" action="{{ route('register') }}">
@@ -226,7 +226,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
 </div>
                           </div>
                         <div class="form-group row ">
-                            <div class="col-md-9">
+                            <div class="col-md-6">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block botonform">
                                     {{ __('Registrate') }}
                                 </button>
