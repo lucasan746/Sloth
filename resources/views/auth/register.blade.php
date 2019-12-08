@@ -69,18 +69,20 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
 <section class="cajareg"  >
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 mt-5">
+        <div class="col-md-6 cardreg">
             <div class="card mt-3">
-                <h5 class="card-title">{{ __('Tus datos') }}</h5>
+                <h5 class="card-header col-md-12">{{ __('Completa tus datos') }}</h5>
 
-                <div class="card-body ">
+                <div class="card-body  ">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+<div class="row justify-content-around">
 
-                        <div class="form-group row">
-                            <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
-                            <div class="col-md-6">
+                        <div class="form-group col-6">
+                            <label for="nombre" class="col-form-label text-md-right">{{ __('Nombre') }}</label>
+
+
                                 <input id="nombre" type="text" class="form-control @error('name') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
 
                                 @error('nombre')
@@ -88,12 +90,12 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="apellido" class="col-md-4 col-form-label text-md-right">{{ __('Apellido') }}</label>
 
-                            <div class="col-md-6">
+                        </div>
+                        <div class="form-group col-6 ">
+                            <label for="apellido" class="col-form-label text-md-right">{{ __('Apellido') }}</label>
+
+
                                 <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
 
                                 @error('apellido')
@@ -101,12 +103,15 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="usuario" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
 
-                            <div class="col-md-6">
+                        </div>
+</div>
+
+<div class="row justify-content-around">
+                        <div class="form-group col-6">
+                            <label for="usuario" class="col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
+
+
                                 <input id="usuario" type="text" class="form-control @error('usuario') is-invalid @enderror" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
 
                                 @error('usuario')
@@ -114,13 +119,13 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+
                         </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
+                        <div class="form-group col-6 ">
+                            <label for="email" class="col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
 
-                            <div class="col-md-6">
+
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
@@ -128,13 +133,14 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+
                         </div>
+</div>
+<div class="row justify-content-around">
+                        <div class="form-group col-6 ">
+                            <label for="contraseña" class="col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
-                        <div class="form-group row">
-                            <label for="contraseña" class="col-md-4 col-form-label text-md-right">{{ __('Contraseña') }}</label>
 
-                            <div class="col-md-6">
                                 <input id="contraseña" type="password" class="form-control  @error('password') is-invalid @enderror" name="contraseña" required autocomplete="contraseña">
 
                                 @error('contraseña')
@@ -143,31 +149,44 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                     </span>
                                 @enderror
                             </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="confcontra" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
 
-                            <div class="col-md-6">
+                        <div class="form-group col-6">
+                            <label for="confcontra" class="col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
+
+
                                 <input id="confcontra" type="password" class="form-control" name="confcontra" required autocomplete="confcontra">
                             </div>
                         </div>
+              <div class="row justify-content-around">
 
-  <div class="form-group row">
-                          <label for="genero" class="col-md-4 col-form-label text-md-right">{{ __('Genero') }}</label>
-                       <div class="input-group col-lg-4  ">
+                       <div class="form-group row col-5 ">
+<label for="genero" class="col-form-label text-md-right">{{ __('Genero') }}</label>
+
                           <select class="custom-select" id="sexo" name="sexo" aria-label="Example select with button addon">
                             <option selected>Hombre</option>
                             <option value="1">Mujer</option>
                             <option value="2">Otro</option>
 
                           </select>
-                        </div>
-  </div>
 
-                         <div class="row">
+                         </div>
+                  <div class="form-group row col-7">
+                   <label for="pais" class="col-form-label text-md-right">{{ __('Nacionalidad') }}</label>
+                 <select class="custom-select" id="pais" name="pais" aria-label="Example select with button addon">
+                 <option selected>Pais</option>
+                 @foreach ($pais as  $pais)
+             <option value="">{{ $pais}}</option>
+                      @endforeach
+                     </select>
+                      </div>
+        </div>
+        <label for="cumpleanos" class="col-form-label text-md-right">{{ __('Cumpleaños') }}</label>
+                         <div class="row justify-content-around">
 
-                         <div class="input-group col-lg-4">
+  <div class="form-group row col-4">
+
+
                            <select class="custom-select" id="dia" name="dia" aria-label="Example select with button addon">
                              <option selected>Dia</option>
                              @foreach ($dia as  $dia)
@@ -175,9 +194,9 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                          @endforeach
 
                            </select>
-                         </div>
+</div>
 
-                       <div class="input-group col-lg-4">
+  <div class="form-group row col-4">
                          <select class="custom-select" id="mes" name="mes" aria-label="Example select with button addon">
                            <option selected>Mes</option>
 
@@ -185,38 +204,31 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                          <option value="">{{ $mes}}</option>
                        @endforeach
                          </select>
-                       </div>
 
-                     <div class="input-group col-lg-4">
+</div>
+  <div class="form-group row col-4">
                        <select class="custom-select" id="año" name="año" aria-label="Example select with button addon">
                          <option selected>Año</option>
                          @foreach ($año as  $año)
                        <option value="">{{ $año}}</option>
                      @endforeach
                        </select>
-                     </div>
 
+           </div>
+</div>
 
-                     <div class="input-group col-lg-8">
-                       <select class="custom-select" id="pais" name="pais" aria-label="Example select with button addon">
-                         <option selected>Pais</option>
-                         @foreach ($pais as  $pais)
-                       <option value="">{{ $pais}}</option>
-                     @endforeach
-                       </select>
-                     </div>
                      <div class="input-group">
-  <div class="custom-file">
+  <div class="custom-file divfotoreg">
     <input type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es">
-    <label class="custom-file-label" for="sube foto">Elige una foto</label>
+    <label class="custom-file-label" for="sube foto">Sube una foto tuya o de tu mascota</label>
   </div>
 
 </div>
                           </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">
-                                    {{ __('Siguiente') }}
+                        <div class="form-group row ">
+                            <div class="col-md-9">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block botonform">
+                                    {{ __('Registrate') }}
                                 </button>
                             </div>
                         </div>

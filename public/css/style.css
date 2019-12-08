@@ -7,7 +7,7 @@
   background-color: inherit;
 }
 .custom-file-input ~ .custom-file-label::after {
-    content: "Subir";
+    content: "Elige";
 }
 body{
   max-width: 1600px;
@@ -699,6 +699,43 @@ font-family: 'Montserrat', sans-serif;
 .nav-forms{
   position: relative;
 
+}
+.card-header{
+  background-color: #8665ed;
+  color: white;
+  padding: 15px;
+}
+.cardreg{
+  margin-top: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.card-body{
+  padding: 0.5rem;
+}
+.form-group{
+  margin-bottom: 2px;
+}
+.divfotoreg{
+  margin-top: 13px;
+}
+.botonform{
+  margin-bottom: 10px;
+  margin-top: 2px;
+  background-color: #744fe7;
+  border-color:#744fe7;
+}
+.botonform:hover{
+background-color: #a7aece;
+  border-color:#a7aece;
+}
+.form-control:focus{
+    border-color:#603cd0;
+}
+.custom-select:focus{
+  border-color:#603cd0;
+}
+.custom-file-input:focus{
+  border-color:#603cd0;
 }
 .cajareg{
   height: 100vh;
