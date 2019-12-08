@@ -3,8 +3,10 @@
 @section('content')
 
   {{-- Publicaciones --}}
-@foreach ($posteos as $post)
+
   <section class="seccionizq">
+
+    @foreach ($posteos as $post)
 
   <article class="perfilamigo">
     <header class="headerperfil">
@@ -50,14 +52,18 @@
     </form>
   </section>
   </div>
-  </article>
-@endforeach
+</article>
+<br><br>
+  @endforeach
+</section>
 
   <br><br>
 
   {{-- Seccion izquierda--}}
   <section class="seccionder">
     <div class="perfilderecha">
+      <img src="{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="fotoperfilderecha">
+      <h4>{{Auth::user()->user}}</h4>
     </div>
     <article class="sugeridos">
       <h4 class="titusugeridos">Sugeridos para ti</h4>

@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
 use App\Post;
 
 class postController extends Controller
@@ -19,5 +22,5 @@ class postController extends Controller
       $nuevoPost->user_id=$form["id"];
       $nuevoPost->save();
     }
-    
+
 }
