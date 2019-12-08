@@ -1,17 +1,17 @@
 @php
-$videos=["video/gatos.mp4","video/peces.mp4","video/perezoso.mp4","video/perros.mp4"];
+$videos=["images/video/gatos.mp4","images/video/peces.mp4","images/video/perezoso.mp4","images/video/perros.mp4"];
 $vidalea=rand(0,3);
 @endphp
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-        <link rel="stylesheet" href="/css/app.css">
+
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport"
     content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather&display=swap" rel="stylesheet">
-    <title></title>
+    <title>Sloth</title>
   </head>
   <body>
     <!-- Menu de registro -->

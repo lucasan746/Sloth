@@ -9,28 +9,28 @@
   <body>
     <header>
       <nav class="navbar">
-          <img src="images/icon-lazy.png" alt="iconoprincipal" class="logohome">
+        <a href="{{route('home')}}"><img src="../images/icon-lazy.png" alt="iconoprincipal" class="logohome"></a>
           <div class="iconosderecha">
 
-            <form class="" action="users" method="get" enctype="multipart/form-data">
+            <form class="" action="{{route('usuarios')}}" method="get" enctype="multipart/form-data">
               @csrf
               <input type="search" name="search" value="" class="busqueda">
-              <button type="submit" name="button" >buscar!</button>
+              <button type="submit" name="button" hidden >buscar!</button>
 
             </form>
 
-              <img src="images/iconos/usuario.png" alt="solicitudes" class="icon-solicitud">
-              <img src="images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje">
-              <img src="images/iconos/notificacion.png" alt="notificaciones" class="icon-notif">
-              <img src="images/iconos/ajustes.png" alt="grupos" class="icon-config">
-              <a href="finsesion.php"><img src="images/iconos/outblanco.png" alt="ajustes" class="icon-cierre"></a>
+              <img src="../images/iconos/usuario.png" alt="solicitudes" class="icon-solicitud">
+              <img src="../images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje">
+              <img src="../images/iconos/notificacion.png" alt="notificaciones" class="icon-notif">
+              <img src="../images/iconos/ajustes.png" alt="grupos" class="icon-config">
+              <a href="finsesion.php"><img src="../images/iconos/outblanco.png" alt="ajustes" class="icon-cierre"></a>
 
           </div>
       </nav>
     </header>
     <br><br><br><br><br>
-    <main class="">
-        @yield('content')
-    </main>
+
+  @yield('content')
+
   </body>
 </html>

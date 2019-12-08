@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('layouts.master')
+
+@section('content')
     <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
       {{csrf_field()}}
       <label for="text">Que quieres compartir?</label>
@@ -11,3 +13,4 @@
       <input type="hidden" name="id" value="1">
       <button type="submit" name="button">Publicar!</button>
     </form>
+@endsection
