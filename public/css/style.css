@@ -6,6 +6,9 @@
 .bar{
   background-color: inherit;
 }
+.custom-file-input ~ .custom-file-label::after {
+    content: "Subir";
+}
 body{
   max-width: 1600px;
 }
@@ -124,7 +127,7 @@ body{
       display: block;
       text-decoration: none;
       color: white;
-      
+
       background-color: rgba(0, 0, 0, 0.5);
       width: 10%;
       height: 6vh;

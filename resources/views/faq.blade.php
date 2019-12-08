@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather&display=swap" rel="stylesheet">
 
-    <title></title>
+    <title>FaQ</title>
   </head>
   <body>
     <header>

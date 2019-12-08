@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather|Montserrat&display=swap" rel="stylesheet">
 
-    <title>Registro</title>
+    <title>Login</title>
   </head>
 <body class="fondooscuro" id="@php
  $id=chr(rand(ord("a"), ord("s")));
