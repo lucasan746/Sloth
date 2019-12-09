@@ -2,28 +2,36 @@
 
 @section('content')
   {{-- Postear algo --}}
-  <div class="">
-    <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
-      {{csrf_field()}}
-      <label for="text">Que quieres compartir?</label>
-      <br>
-      <textarea name="text" rows="8" cols="80"></textarea>
-      <br>
-      <label for="img">Sube una foto o video</label>
-      <input type="file" name="media" value="">
-      <br>
-      <input type="hidden" name="id" value="{{Auth::user()->id}}">
-      <button type="submit" name="button">Publicar!</button>
-    </form>
-  </div>
+
 
   {{-- Publicaciones --}}
+<div class="row justify-content-around col-9">
+
 
   <section class="seccionizq">
+    <div class=" cajaposteo ">
+      <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
+        {{csrf_field()}}
+        <h4 class="card-header ">Crea una publicación</h4>
+          <textarea class="col-12 border-light p-3" name="name" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
 
+          <div class="image-upload ">
+    <label for="file-input">
+
+      <img src="/images/iconos/iconfile-2.png" alt ="foto" title ="foto" >
+    </label>
+        <input id="file-input" name="media" type="file"/>
+        <input type="hidden" name="id" value="{{Auth::user()->id}}">
+      <button class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
+</div>
+
+
+      </form>
+
+    </div>
     @foreach ($posteos as $post)
 
-  <article class="perfilamigo">
+  <article class="perfilamigo ">
     <header class="headerperfil">
       <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
       <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
@@ -41,7 +49,7 @@
   </section>
   <div class="descrip1">
   <ul type="none">
-  <li>
+  <li class="li-usuario">
   <h4>{{$post->user->user}}</h4>
   <span>{{$post->text}}</span>
   </li>
@@ -62,7 +70,7 @@
   <br>
   <section class="hacer-comentario">
     <form class="" action="home.php" method="post">
-      <textarea name="name" rows="3" cols="80" placeholder="Añade un comentario"></textarea>
+      <textarea name="name" rows="3" cols="80" placeholder="Añade un comentario" class="p-3"></textarea>
       <button  type="submit" name="button"><h4>Publicar</h4></button>
     </form>
   </section>
@@ -73,19 +81,27 @@
 </section>
 
 
-  <br><br>
-
-  {{-- Seccion izquierda--}}
-  <section class="seccionder">
+  {{-- Seccion derecha--}}
+  <section class="seccionder position-fixed">
     <div class="perfilderecha">
       <img src="/storage/{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="fotoperfilderecha">
       <h4>{{Auth::user()->user}}</h4>
+      <p class="textperfil"><small class="text-muted">En linea</small></p>
     </div>
     <article class="sugeridos">
-      <h4 class="titusugeridos">Sugeridos para ti</h4>
+      <div class="">
+      <h4 class="titusugeridos">Sugerencias para ti</h4>
+      <a href="#"><h4 class="linksuge">Ver todo</h4></a>
+      </div>
+      <div class="perfilsuge">
       <ul>
         <img class="img" src="images/home/iconom.jpg" alt="icono"width="50px" height="48px">
         <a href=""><h4>Lechuga_verde</h4></a>
+        <a href="#"><h4 class="botonseg">Seguir</h4></a>
+        <p class="textsuge"><small class="text-muted">En linea</small></p>
+          </div>
+
+
         <br>
         <img class="img" src="images/home/iconom1.jpg" alt="icono"width="50px" height="48px">
         <a href="user@user.com"><h4>Satan.21</h4></a>
@@ -124,5 +140,5 @@
       </ul>
     </footer>
   </section>
-
+</div>
 @endsection
