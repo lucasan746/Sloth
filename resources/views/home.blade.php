@@ -1,6 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
+  {{-- Postear algo --}}
+  <div class="">
+    <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
+      {{csrf_field()}}
+      <label for="text">Que quieres compartir?</label>
+      <br>
+      <textarea name="text" rows="8" cols="80"></textarea>
+      <br>
+      <label for="img">Sube una foto o video</label>
+      <input type="file" name="media" value="">
+      <br>
+      <input type="hidden" name="id" value="{{Auth::user()->id}}">
+      <button type="submit" name="button">Publicar!</button>
+    </form>
+  </div>
 
   {{-- Publicaciones --}}
 
@@ -10,8 +25,8 @@
 
   <article class="perfilamigo">
     <header class="headerperfil">
-      <a href="#"><img src="/storage/{{$post->imagenVideo}}" alt="" width="50px" height="48px"></a>
-      <a class="nombreperfil"href="#"><h4>{{$post->user->user}}</h4></a>
+      <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
+      <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
     </header>
   <div class="imagenpefiles">
     <img src="/storage/{{$post->imagenVideo}}" alt="" width="100%" >
