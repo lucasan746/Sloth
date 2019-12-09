@@ -27,14 +27,14 @@
 $amigos=Auth::user()->amigos;
 @endphp
 @foreach ($amigos as $amigo)
-@if ($amigo->amigo!=$perfil->id)
+@if ($amigo->amigo==$perfil->id)
 @php
-  $follow=false;
+  $follow=$amigo->id;
+    break;
 @endphp
 @else
   @php
-  $follow=$amigo->id;
-  break;
+  $follow=false;
   @endphp
 @endif
 @endforeach
@@ -52,7 +52,7 @@ $amigos=Auth::user()->amigos;
   <button type="submit" name="button">Publicar!</button>
 </form>
 @else
-@if (isset($follow))
+@if ($follow==$amigo->id)
   <p>Ya sigues a este usuario</p>
   <form class="" action="/unfollow" method="post"  enctype="multipart/form-data">
     @csrf

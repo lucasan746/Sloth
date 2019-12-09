@@ -25,7 +25,7 @@ $factory->define(User::class, function (Faker $faker) {
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'sexo'=>'M',
         'pais'=>'Arg',
-        'fotoperfil'=>$faker->image('public/storage/',640,480, null, false),
+        'fotoperfil'=>$faker->image('public/storage/',640,480, 'cats', false),
         'fecha'=>'10-10-2012',
     ];
 });
