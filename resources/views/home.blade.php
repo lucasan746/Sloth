@@ -72,6 +72,7 @@
   @endforeach
 </section>
 
+
   <br><br>
 
   {{-- Seccion izquierda--}}
