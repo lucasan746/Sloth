@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Sloth</title>
   </head>
-  <body>
+  <body class="home">
     <header>
-      <nav class="navbar">
-        <a href="{{route('home')}}"> <img src="../images/icon-lazy.png" alt="iconoprincipal" class="logohome"></a>
+      <nav class="navhome">
+
 
           <div class="iconosderecha">
-
+  <a href="{{route('home')}}"> <img src="../images/icon-lazy.png" alt="iconoprincipal" class="logohome"></a>
             <form class="" action="{{route('usuarios')}}" method="get" enctype="multipart/form-data">
               @csrf
               <input type="search" name="search" value="" class="busqueda">

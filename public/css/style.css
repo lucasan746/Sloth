@@ -716,7 +716,8 @@ font-family: 'Montserrat', sans-serif;
   position: relative;
 
 }
-.card-header{
+
+.heeaderreg{
   background-color: #8665ed;
   color: white;
   padding: 15px;
@@ -726,7 +727,7 @@ font-family: 'Montserrat', sans-serif;
   margin-top: 4rem;
   font-family: 'Montserrat', sans-serif;
 }
-.card-body{
+.cardbodyreg{
   padding: 0.5rem;
 }
 .form-group{
@@ -1331,7 +1332,7 @@ font-size: 0.9rem;
 
 /* Fin */
 /* navbar home */
-.navbar{
+.navhome{
   position: fixed;
   height: 56px;
   background-color:#7d5bb9;
@@ -1357,7 +1358,7 @@ top:1px;
 }
 .busqueda{
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 10%;
   width: 25%;
   height: 33px;
@@ -1368,27 +1369,27 @@ top:1px;
   width: 30px;
   height: 30px;
   right: 34%;
-  top: 5px;
+  top: 10px;
 }
 .icon-mensaje{
   position: absolute;
 width: 30px;
 height: 30px;
 right: 28%;
-top: 5px;
+top: 10px;
 }
 .icon-notif{
   position: absolute;
     width: 30px;
     height: 30px;
     right: 22%;
-    top: 5px;
+    top: 10px;
 }
 .icon-config{
   position: absolute;
     width: 30px;
     height: 30px;
-    top: 5px;
+    top: 10px;
     right: 16%;
 }
 .icon-cierre{
@@ -1396,14 +1397,14 @@ top: 5px;
     width: 30px;
     height: 30px;
     right: 4%;
-    top: 5px;
+    top: 10px;
 }
 .icon-foto{
   position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    top: 5px;
+    top: 10px;
     right: 10%;
 }
 .perfil{
@@ -1427,10 +1428,13 @@ top: 5px;
 }
 
 /* Fin */
-.Home{
+.home{
   background-color: #fafafa;
   font-family: 'Alegreya Sans', sans-serif;
  font-size: 0.9rem;
+}
+.home h4{
+  font-size: 1rem;
 }
 .cuerpohome{
   max-width: 935px;
@@ -1440,8 +1444,8 @@ top: 5px;
   padding-top: 20vh;
   position: relative;
 
-
 }
+
 .barratablet{
   display: none;
 }
@@ -1450,25 +1454,50 @@ top: 5px;
   max-width: 614px;
   width: 100%;
   height: 100vh;
-  display: flex;
+
   flex-direction: column;
-  margin-right: 5%;
-  position: absolute;
+  margin-left: 200px;
+  /* position: absolute; */
   /* float: left; */
   z-index: 1;
 
 }
+.cajaposteo{
+  margin-bottom: 40px;
+  border: 1px solid #d8c0ff;
+  background-color: white;
+}
 
+.image-upload{
+  position: relative;
+}
+.image-upload input{
+    display: none;
+}
+.image-upload img{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.botonpost{
+position: absolute;
+right: 20px;
+top:5px;
+  }
+.btn-primary:hover{
+  background-color: violet;
+}
 .headerperfil{
   width: 100%;
   height: 60px;
   background-color: white;
   position: relative;
+  border-bottom: 1px solid #d8c0ff;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 40%;
+  /* width: 40%; */
   border-radius: 5px;
   text-decoration: none;
 }
@@ -1502,7 +1531,7 @@ top: 5px;
   display:inline-block;
   margin-left: 10px;
   margin-top: 5px;
-  border: solid 1px #424242;;
+  border: solid 1px #9E9E9E;;
 
 }
 .nombreperfil{
@@ -1514,9 +1543,10 @@ margin-left: 10px;
 top: 21px;
 }
 .perfilamigo{
-  border: solid 1px grey;
+  border: solid 1px #d8c0ff;
   display: flex;
   flex-direction: column;
+  background-color: white;
 
 }
 .descrip{
@@ -1553,20 +1583,28 @@ top: 21px;
   border: none;
   background-color: white;
   color: grey;
+  margin-left: 500px;
 }
 .hacer-comentario button:focus{
   color: #7943dd;
 }
+.iconslikes{
+  margin-top: 5px;
+}
 .imgperfil{
   border-radius: 50%;
 }
-
-
+.li-usuario{
+  border-bottom: 1px solid #d8c0ff;
+}
+.descrip1{
+  margin-left: 15px;
+}
 .seccionder{
   /* border: solid black 2px; */
- right: 5%;
+ right: 12%;
  left: 58%;
- position: fixed;
+ /* position: fixed; */
  width: 20%;
  height: 80vh;
 
@@ -1575,23 +1613,31 @@ top: 21px;
 /* Seccion 2 */
 .perfilderecha{
   position: relative;
-  background-color: #977fc2;
+  background-color: white;
  border-radius: 5px;
+ border: 1px solid #d8c0ff;
+ margin-bottom: 20px;
 }
 .fotoperfilderecha{
   border-radius: 50%;
-  border: solid 1px #424242;
+  border: solid 1px #9E9E9E;
   margin: 2%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 .perfilderecha h4{
   display: inline-block;
   position: absolute;
-  margin-left: 10px;
+  margin-left: 6px;
   top: 20px;
-  font-size: 20px;
- color: white;
+
+ color: black;
+}
+.textperfil{
+  position: absolute;
+margin-left: 14px;
+top: 38px;
+left: 64px;
 }
 .titusugeridos{
   margin-left: 5px;
@@ -1602,17 +1648,33 @@ top: 21px;
 .img{
   border-radius: 5vh;
   margin-left: 5px;
-  border:solid 1px #424242;
+  border:solid 1px #9E9E9E;
 
 }
 .sugeridos{
-  border: solid 1px grey;
+  border: solid 1px #d8c0ff;
   width: 100%;
   height: 28vh;
   overflow: auto;
   background-color: white;
   position: relative;
   border-radius: 2%;
+}
+.linksuge{
+  position: absolute;
+  top: -34px;
+  right: -50px;
+  font-size: 0.8rem;
+}
+.botonseg{
+  color:#7d5bb9;
+  right: 2px;
+    position: absolute;
+}
+.textsuge{
+  position: absolute;
+top: 58px;
+left: 62px;
 }
 .sugeridos a{
   width: 73%;
@@ -1622,13 +1684,16 @@ top: 21px;
   color: black;
   margin-top: 10px;
 
-
+}
+.perfilsuge h4{
+  font-size: 0.9rem;
+  margin-left: 6px;
 }
 .adopciones{
   width: 100%;
   height: 27vh;
-  margin-top: 5%;
-  border: solid 1px grey;
+  margin-top: 20px;
+  border: solid 1px #d8c0ff;
   border-radius: 2%;
   }
 
