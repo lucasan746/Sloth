@@ -1347,6 +1347,7 @@ font-size: 0.9rem;
 width: 56px;
 position: absolute;
 left: 20px;
+top:1px;
 }
 
 .iconosderecha{
@@ -1356,7 +1357,7 @@ left: 20px;
 }
 .busqueda{
   position: absolute;
-  top: 23%;
+  top: 5px;
   left: 10%;
   width: 25%;
   height: 33px;
@@ -1367,27 +1368,27 @@ left: 20px;
   width: 30px;
   height: 30px;
   right: 34%;
-  top: 18%;
+  top: 5px;
 }
 .icon-mensaje{
   position: absolute;
 width: 30px;
 height: 30px;
 right: 28%;
-top: 18%;
+top: 5px;
 }
 .icon-notif{
   position: absolute;
     width: 30px;
     height: 30px;
     right: 22%;
-    top: 18%;
+    top: 5px;
 }
 .icon-config{
   position: absolute;
     width: 30px;
     height: 30px;
-    top: 18%;
+    top: 5px;
     right: 16%;
 }
 .icon-cierre{
@@ -1395,14 +1396,14 @@ top: 18%;
     width: 30px;
     height: 30px;
     right: 4%;
-    top: 18%;
+    top: 5px;
 }
 .icon-foto{
   position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    top: 18%;
+    top: 5px;
     right: 10%;
 }
 .perfil{
@@ -1556,7 +1557,9 @@ top: 21px;
 .hacer-comentario button:focus{
   color: #7943dd;
 }
-
+.imgperfil{
+  border-radius: 50%;
+}
 
 
 .seccionder{
