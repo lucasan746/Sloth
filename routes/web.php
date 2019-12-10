@@ -31,3 +31,4 @@ Route::get('perfil/{id}','userController@seguir')->middleware('auth')->name('per
 Route::post('follow','seguirController@seguir')->middleware('auth');
 Route::post('unfollow','seguirController@dejarSeguir')->middleware('auth');
 Route::get('users', 'userController@search')->name('usuarios')->middleware('auth');
+Route::post('eliminar','postController@borrarPost')->middleware('auth');
