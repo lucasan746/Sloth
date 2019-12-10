@@ -19,7 +19,7 @@ Route::get('user/','userController@listaUser');
 Auth::routes();
 Route::get('preguntas', function () {
     return view('faq');
-});
+})->name('preguntas');
 Route::get('/home', 'HomeController@listaPost')->name('home')->middleware('auth');
 
 Route::get('publicacion/',function(){
