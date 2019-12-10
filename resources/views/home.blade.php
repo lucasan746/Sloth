@@ -7,7 +7,6 @@
   {{-- Publicaciones --}}
 <div class="row justify-content-around col-9">
 
-
   <section class="seccionizq">
     <div class=" cajaposteo ">
       <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
@@ -86,7 +85,10 @@
 @endforeach
   @endforeach
 </section>
-
+@php
+  $al=rand(1,count($posteos));
+  $al2=rand(1,count($posteos));
+@endphp
 
   {{-- Seccion derecha--}}
   <section class="seccionder position-fixed">
@@ -100,38 +102,23 @@
       <h4 class="titusugeridos">Sugerencias para ti</h4>
       <a href="#"><h4 class="linksuge">Ver todo</h4></a>
       </div>
+      <br>
       <div class="perfilsuge">
       <ul>
-        <img class="img" src="images/home/iconom.jpg" alt="icono"width="50px" height="48px">
-        <a href=""><h4>Lechuga_verde</h4></a>
-        <a href="#"><h4 class="botonseg">Seguir</h4></a>
-        <p class="textsuge"><small class="text-muted">En linea</small></p>
+        <img class="img" src="/storage/{{$posteos[$al]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+        <a href="perfil/{{$posteos[$al]->user->id}}"><h4>{{$posteos[$al]->user->user}}</h4></a>
           </div>
-
-
-        <br>
-        <img class="img" src="images/home/iconom1.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Satan.21</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom2.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Copito_Hs</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom3.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Bolita.000</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Lechuga_verde</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom1.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Satan.21</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom2.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Copito_Hs</h4></a>
-        <br>
-        <img class="img" src="images/home/iconom3.jpg" alt="icono"width="50px" height="48px">
-        <a href="user@user.com"><h4>Bolita.000</h4></a>
       </ul>
+
+      <div class="perfilsuge">
+      <ul>
+        <img class="img" src="/storage/{{$posteos[$al2]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+        <a href="perfil/{{$posteos[$al2]->user->id}}"><h4>{{$posteos[$al2]->user->user}}</h4></a>
+          </div>
+      </ul>
+
     </article>
+
 
     <article class="adopciones">
       <h4 class="titusugeridos">Publicidad</h4>
