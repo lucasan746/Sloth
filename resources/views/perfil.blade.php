@@ -52,6 +52,7 @@ $amigos=Auth::user()->amigos;
   <button type="submit" name="button">Publicar!</button>
 </form>
 @else
+@isset($amigo->id)
 @if ($follow==$amigo->id)
   <p>Ya sigues a este usuario</p>
   <form class="" action="/unfollow" method="post"  enctype="multipart/form-data">
@@ -67,6 +68,16 @@ $amigos=Auth::user()->amigos;
       <input type="hidden" name="seguir" value="{{$perfil->id}}">
       <button type="submit" name="button">Seguir a este usuario</button>
     </form>
+@endif
+@endisset
+@if (isset($amigo->id))
+  @else
+  <form class="" action="/follow" method="post"  enctype="multipart/form-data">
+    @csrf
+    <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
+    <input type="hidden" name="seguir" value="{{$perfil->id}}">
+    <button type="submit" name="button">Seguir a este usuario</button>
+  </form>
 @endif
 @endif
 <div class="card mb-3">

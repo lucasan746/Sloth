@@ -30,6 +30,11 @@
 
     </div>
     @foreach ($posteos as $post)
+@foreach (Auth::user()->amigos as $usu )
+
+
+@if ($usu->amigo==$post->user_id)
+
 
   <article class="perfilamigo ">
     <header class="headerperfil">
@@ -77,6 +82,8 @@
   </div>
 </article>
 <br><br>
+@endif
+@endforeach
   @endforeach
 </section>
 
