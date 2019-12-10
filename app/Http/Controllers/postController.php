@@ -12,7 +12,6 @@ class postController extends Controller
 
     function agregarPost(request $form)
     {
-
       $ruta=$form->file('media')->store('public');
       $image=basename($ruta);
       $nuevoPost= new Post();

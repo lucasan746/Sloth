@@ -39,7 +39,7 @@
         <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
           <h4 class="card-header ">Crea una publicación</h4>
-            <textarea class="col-12 border-light p-3" name="name" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
+            <textarea class="col-12 border-light p-3" name="text" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
 
             <div class="image-upload ">
       <label for="file-input">
@@ -84,13 +84,7 @@
       @endif
       </div>
     </section>
-      {{-- @foreach ($posteos as $post)
-  @foreach (Auth::user()->amigos as $usu )
-
-
-  @if ($usu->amigo==$post->user_id)
-
-
+      @foreach ($perfil->post as $post)
     <article class="perfilamigo ">
       <header class="headerperfil">
         <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
@@ -137,10 +131,8 @@
     </div>
   </article>
   <br><br>
-  @endif
-  @endforeach
     @endforeach
-  </section> --}}
+  </section>
   @php
     // $al=rand(1,count($posteos));
     // $al2=rand(1,count($posteos));
