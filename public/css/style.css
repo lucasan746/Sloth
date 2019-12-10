@@ -1732,11 +1732,15 @@ left: 62px;
   border:3px solid #7d5bb9;
 }
 
-.dataperfil{
+.publicidad{
 
+
+border: solid 1px #d8c0ff;
+    
+    background-color: white;
+    position: relative;
+    border-radius: 2%;
 }
-
-
 
 /* Media query */
 /* laptop */

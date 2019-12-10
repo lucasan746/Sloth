@@ -51,7 +51,7 @@
         <button class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
   </div>
         </form>
-
+    </div>
 
       @else
       @isset($amigo->id)
@@ -82,10 +82,10 @@
       </form>
       @endif
       @endif
-      </div>
-    </section>
+
+
       @foreach ($perfil->post as $post)
-    <article class="perfilamigo ">
+  <article class="perfilamigo ">
       <header class="headerperfil">
         <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
         <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
@@ -141,26 +141,21 @@
   <br><br>
     @endforeach
   </section>
-  @php
-    // $al=rand(1,count($posteos));
-    // $al2=rand(1,count($posteos));
-    // $al3=rand(1,count($posteos));
-  @endphp
 
     {{-- Seccion derecha--}}
     <section class="seccionder position-fixed">
 
-      <article class="sugeridos">
+      <article class="publicidad">
         <div class="">
-        <h4 class="titusugeridos">Sugerencias para ti</h4>
-        <a href="#"><h4 class="linksuge">Ver todo</h4></a>
+        <h4 class="titusugeridos">Publicidad</h4>
+        <a href="http://santuarioigualdad.org"><img src="/images/home/publicidad3.jpg" alt="" width="100%" height="85%"></a>
       </div>
       </article>
 
 
       <article class="adopciones">
         <h4 class="titusugeridos">Publicidad</h4>
-        <a href="#"><img src="/images/home/adopcion.png" alt="fondo" width="100%"></a>
+        <a href="http://reddeapoyocanino.org"><img src="/images/home/publicidad2.jpg" alt="fondo" width="100%" height="90%"></a>
       </article>
       <footer>
         <ul class="foothome">
