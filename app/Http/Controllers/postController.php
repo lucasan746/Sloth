@@ -22,5 +22,11 @@ class postController extends Controller
       return redirect('perfil/'.$form["id"]);
 
     }
+    function borrarPost(request $form)
+    {
+      $unfollow=Post::find($form["id_post"]);
+      $unfollow->delete();
+      return redirect('perfil/'.$form["perfil"]);
+    }
 
 }

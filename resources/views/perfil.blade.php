@@ -89,6 +89,14 @@
       <header class="headerperfil">
         <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
         <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
+        @if ($post->user_id==Auth::user()->id)
+          <form class="" action="/eliminar" method="post"  enctype="multipart/form-data">
+            @csrf
+            <input type="hidden" name="id_post" value="{{$post->id}}">
+            <input type="hidden" name="perfil" value="{{Auth::user()->id}}">
+            <button class="botonpost btn btn-primary" type="submit" name="button">Borrar</button>
+          </form>
+        @endif
       </header>
     <div class="imagenpefiles">
       <img src="/storage/{{$post->imagenVideo}}" alt="" width="100%" >
