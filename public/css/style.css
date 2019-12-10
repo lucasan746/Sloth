@@ -1732,7 +1732,9 @@ left: 62px;
   border:3px solid #7d5bb9;
 }
 
+.dataperfil{
 
+}
 
 
 
@@ -1788,7 +1790,18 @@ margin-right: 2px;
   .errorpelaje{
     right: 23%;
   }
+  .seccionizq{
+    margin-left: 60px;
+    max-width: 585px;
+  }
+  .seccionder{
+    width: 23%;
+    right: 0;
+  }
 }
+
+/* home */
+
 /* Tablet */
 
 @media screen and (max-width: 979px){
