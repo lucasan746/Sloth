@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-  {{-- Perfil  --}}
+  {{-- Perfil // Trae variable con un usuario ($perfil)  --}}
   <div class="row justify-content-center col-9">
 
     <section class="seccionizq ">
@@ -15,26 +15,29 @@
             <p class="card-text">Agrega una breve presentación para que las personas sepan más sobre ti.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-
       </div>
-
+{{-- Comprueba si ya seguis al usuario/ Devuelve variable $follow  --}}
       @php
       $amigos=Auth::user()->amigos;
       @endphp
       @foreach ($amigos as $amigo)
       @if ($amigo->amigo==$perfil->id)
+        {{-- Si ya se sigue al usuario $follow va a ser igual al id de ese usuario --}}
       @php
       $follow=$amigo->id;
         break;
       @endphp
+      {{-- Si no se sigue al usuario $follow va a ser igual false --}}
       @else
       @php
       $follow=false;
       @endphp
       @endif
       @endforeach
-      @if (Auth::user()->id===$perfil->id)
 
+      {{-- Comprueba si el usuario es el mismo con el que estas logueado --}}
+
+      @if (Auth::user()->id===$perfil->id)
       <div class=" cajaposteo ">
         <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
           {{csrf_field()}}
@@ -53,6 +56,7 @@
         </form>
     </div>
 
+    {{-- Comprueba si ya seguis al usuario // mediante variable $follow --}}
       @else
       @isset($amigo->id)
       @if ($follow==$amigo->id)
@@ -83,7 +87,7 @@
       @endif
       @endif
 
-
+{{-- foreach con publicaciones del usuario --}}
       @foreach ($perfil->post as $post)
   <article class="perfilamigo ">
       <header class="headerperfil">

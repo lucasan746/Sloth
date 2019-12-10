@@ -25,7 +25,7 @@ class userController extends Controller
     return view ('perfil',$vac);
   }
   public function search(request $form) {
-  $users = User::where('user', 'like', '%'.$form["search"].'%')->orderBy('id', 'desc')->paginate(6);
+  $users = User::where('user', 'like', '%'.$form["search"].'%')->orderBy('id', 'desc');
   $vac=compact('users');
   return view('users',$vac);
 }

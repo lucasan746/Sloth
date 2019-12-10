@@ -3,8 +3,6 @@
 @section('content')
   {{-- Postear algo --}}
 
-
-  {{-- Publicaciones --}}
 <div class="row justify-content-around col-9">
 
   <section class="seccionizq">
@@ -28,10 +26,12 @@
       </form>
 
     </div>
+
+      {{-- Publicaciones  --}}
     @foreach ($posteos as $post)
 @foreach (Auth::user()->amigos as $usu )
 
-
+{{-- Evalua que solo se muestren las publicaciones de usuarios seguidos --}}
 @if ($usu->amigo==$post->user_id)
 
 
