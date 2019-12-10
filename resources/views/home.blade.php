@@ -88,6 +88,7 @@
 @php
   $al=rand(1,count($posteos));
   $al2=rand(1,count($posteos));
+  $al3=rand(1,count($posteos));
 @endphp
 
   {{-- Seccion derecha--}}
@@ -102,21 +103,30 @@
       <h4 class="titusugeridos">Sugerencias para ti</h4>
       <a href="#"><h4 class="linksuge">Ver todo</h4></a>
       </div>
-      <br>
-      <div class="perfilsuge">
-      <ul>
-        <img class="img" src="/storage/{{$posteos[$al]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
-        <a href="perfil/{{$posteos[$al]->user->id}}"><h4>{{$posteos[$al]->user->user}}</h4></a>
-          </div>
-      </ul>
+
+
 
       <div class="perfilsuge">
       <ul>
         <img class="img" src="/storage/{{$posteos[$al2]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
         <a href="perfil/{{$posteos[$al2]->user->id}}"><h4>{{$posteos[$al2]->user->user}}</h4></a>
+        <p class="textsuge"><small class="text-muted">En linea</small></p>
           </div>
       </ul>
-
+      <div class="perfilsuge">
+      <ul>
+        <img class="img" src="/storage/{{$posteos[$al]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+        <a href="perfil/{{$posteos[$al]->user->id}}"><h4>{{$posteos[$al]->user->user}}</h4></a>
+        <p class="textsuge1"><small class="text-muted">En linea</small></p>
+          </div>
+      </ul>
+      <div class="perfilsuge">
+      <ul>
+        <img class="img" src="/storage/{{$posteos[$al3]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+        <a href="perfil/{{$posteos[$al3]->user->id}}"><h4>{{$posteos[$al3]->user->user}}</h4></a>
+        <p class="textsuge2"><small class="text-muted">En linea</small></p>
+          </div>
+      </ul>
     </article>
 
 

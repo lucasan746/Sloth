@@ -717,7 +717,7 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
-.heeaderreg{
+.headerreg{
   background-color: #8665ed;
   color: white;
   padding: 15px;
@@ -1676,6 +1676,16 @@ left: 64px;
 top: 58px;
 left: 62px;
 }
+.textsuge1{
+  position: absolute;
+top: 119px;
+left: 62px;
+}
+.textsuge2{
+  position: absolute;
+top: 184px;
+left: 62px;
+}
 .sugeridos a{
   width: 73%;
   display: inline-block;
@@ -1709,6 +1719,22 @@ left: 62px;
   text-decoration: none;
   color: #c7c7c7;
 }
+
+
+
+/* pagina perfil */
+.cajaperfil{
+  background-color: white;
+  margin-bottom: 40px;
+    border: 1px solid #d8c0ff;
+}
+.desperfil img{
+  border:3px solid #7d5bb9;
+}
+
+
+
+
 
 /* Media query */
 /* laptop */
