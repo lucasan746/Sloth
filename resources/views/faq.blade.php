@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather&display=swap" rel="stylesheet">
-
+      <link rel="shortcut icon" href="../images/icon-lazy.png">
     <title>FaQ</title>
 </head>
 

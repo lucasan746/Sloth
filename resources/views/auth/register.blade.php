@@ -52,12 +52,14 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather|Montserrat&display=swap" rel="stylesheet">
-
+      <link rel="shortcut icon" href="../images/icon-lazy.png">
     <title>Registro</title>
 </head>
 
 <body class="fondooscuro" id="@php
-  $id=chr(rand(ord(" a"), ord("s"))); echo $id; @endphp">
+ $id=chr(rand(ord("a"), ord("s")));
+ echo $id;
+@endphp">
     <header>
         <nav class="nav-forms">
             <a href="{{ url('/') }}"><img src="images/icon-lazy.png" alt="icono" class="iconoreg"></a>

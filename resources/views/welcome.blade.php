@@ -12,6 +12,7 @@ $vidalea=rand(0,3);
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Lato|Merienda+One|Merriweather&display=swap" rel="stylesheet">
     <title>Sloth</title>
+      <link rel="shortcut icon" href="../images/icon-lazy.png">
 </head>
 
 <body>

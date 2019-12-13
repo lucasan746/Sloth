@@ -2,8 +2,6 @@
 
 @section('content')
     @foreach ($users as $user)
-
-
         <div class="card">
 <a class="busquedas" href="perfil/{{$user->id}}">
           <div class="container">

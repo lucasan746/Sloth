@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/icon-lazy.png">
     <title>Sloth</title>
   </head>
   <body class="home">
