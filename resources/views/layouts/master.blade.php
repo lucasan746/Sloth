@@ -39,7 +39,9 @@
     </header>
     <br><br><br><br><br>
 
-  @yield('content')
-
+  <div id="app">
+@yield('content')
+  </div>
+<script src="{{asset('js/app.js')}}" charset="utf-8"></script>
   </body>
 </html>

@@ -6,26 +6,7 @@
 <div class="row justify-content-around col-9">
 
   <section class="seccionizq">
-    <div class=" cajaposteo ">
-      <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
-        {{csrf_field()}}
-        <h4 class="card-header ">Crea una publicación</h4>
-          <textarea class="col-12 border-light p-3" name="text" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
-
-          <div class="image-upload ">
-    <label for="file-input">
-
-      <img src="/images/iconos/iconfile-2.png" alt ="foto" title ="foto" >
-    </label>
-        <input id="file-input" name="media" type="file"/>
-        <input type="hidden" name="id" value="{{Auth::user()->id}}">
-      <button class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
-</div>
-
-
-      </form>
-
-    </div>
+    <post-component></post-component>
 
       {{-- Publicaciones  --}}
     @foreach ($posteos as $post)
