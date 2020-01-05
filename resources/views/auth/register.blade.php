@@ -1,27 +1,27 @@
 @php
-$pais = [
-"Arg" => "Argentina",
-"Bol" => "Bolivia",
-"Chi" => "Chile",
-"Col" => "Colombia",
-"Cos" => "Costa Rica",
-"Cub" => "Cuba",
-"Ecu" => "Ecuador",
-"Sal" => "El Salvador",
-"Esp" => "España",
-"Gua" => "Guatemala",
-"Hon" => "Honduras",
-"Mex" => "México",
-"Nic" => "Nicaragua",
-"Pan" => "Panamá",
-"Par" => "Paraguay",
-"Pue" => "Puerto Rico",
-"Per" => "Perú",
-"Dom" => "República Dominicana",
-"Uru" => "Uruguay",
-"Ven" => "Venezuela"
-
-];
+// $pais = [
+// "Arg" => "Argentina",
+// "Bol" => "Bolivia",
+// "Chi" => "Chile",
+// "Col" => "Colombia",
+// "Cos" => "Costa Rica",
+// "Cub" => "Cuba",
+// "Ecu" => "Ecuador",
+// "Sal" => "El Salvador",
+// "Esp" => "España",
+// "Gua" => "Guatemala",
+// "Hon" => "Honduras",
+// "Mex" => "México",
+// "Nic" => "Nicaragua",
+// "Pan" => "Panamá",
+// "Par" => "Paraguay",
+// "Pue" => "Puerto Rico",
+// "Per" => "Perú",
+// "Dom" => "República Dominicana",
+// "Uru" => "Uruguay",
+// "Ven" => "Venezuela"
+//
+// ];
 
 $dia = array(1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
@@ -170,11 +170,11 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                     <div class="form-group row col-7">
                                         <label for="pais" class="col-form-label text-md-right">{{ __('Nacionalidad') }}</label>
                                         <select class="custom-select @error('pais') is-invalid @enderror" id="pais" name="pais" aria-label="Example select with button addon">
-                                            <option selected>Pais</option>
-                                            @foreach ($pais as $id => $pais)
-                                            <option value="{{$id}}">{{ $pais}}</option>
-                                            @endforeach
+
                                         </select>
+                                        <div  id="provAr" >
+
+                                        </div>
                                     </div>
                                 </div>
                                 <label for="cumpleanos" class="col-form-label text-md-right">{{ __('Cumpleaños') }}</label>

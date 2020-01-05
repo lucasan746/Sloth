@@ -8,7 +8,8 @@ let inputEmail=inputs[4];
 let inputContra=inputs[5];
 let inputConfCon=inputs[6];
 let inputGenero=inputs[7];
-let inputPais=inputs[8];
+let selectPaises = document.getElementById('pais');
+let divProv = document.getElementById('provAr');
 let inputDia=inputs[9];
 let inputMes=inputs[10];
 let inputAño=inputs[11];
@@ -26,7 +27,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputNombre.value.length<=2) {
       inputNombre.setAttribute('class','form-control is-invalid');
       if (errorNomb.textContent=='') {
-        let mensajeNombre= document.createTextNode('Es demasiado corto');
+        let mensajeNombre= document.createTextNode('El nombre demasiado corto');
         errorNomb.appendChild(mensajeNombre);
       }
 
@@ -40,7 +41,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputApellido.value.length<=2) {
       inputApellido.setAttribute('class','form-control is-invalid');
       if (errorAp.textContent=='') {
-        let mensajeApellido=document.createTextNode('es demasiado corto');
+        let mensajeApellido=document.createTextNode('El apellido es demasiado corto');
         console.log(inputApellido);
         errorAp.appendChild(mensajeApellido);
       }
@@ -109,23 +110,40 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
   }
 
   // APi
-  let selectProv = document.getElementById('selectProv');
 
-  // function mostrarProvincia() {
-  //   fetch('https://apis.datos.gob.ar/georef/api/provincias')
-  //   .then(function(datos) {
-  //     return datos.json();
-  //   })
-  //   .then(function(datos){
-  //     let provincias =datos.provincias;
-  //     for (provincia of provincias) {
-  //       let optionProvincia = document.createElement('option');
-  //       let nombreProvincia = provincia.nombre;
-  //       document.createTextNode(provincia.nombre);
-  //       optionProvincia.appendChild(nombreProvincia);
-  //       optionProvincia.setAttribute('value',provincia.id);
-  //       selectProv.appendChild(optionProvincia);
-  //     }
-  //   })
-  // }
-  // mostrarProvincia();
+  fetch('https://restcountries.eu/rest/v2')
+    .then(function(datos){
+      return datos.json();
+    })
+    .then(function(paises){
+      for (pais of paises) {
+        let optionPais = document.createElement('option');
+        optionPais.setAttribute('value', pais.alpha2Code);
+        let nombrePais = document.createTextNode(pais.name);
+        optionPais.appendChild(nombrePais);
+        selectPaises.appendChild(optionPais);
+      }
+    });
+
+    selectPaises.onchange = function(){
+      let paisElegido = selectPaises.options[selectPaises.selectedIndex].value;
+      console.log(paisElegido);
+      if (paisElegido == "AR") {
+        let selectProvincia = document.createElement('select');
+        fetch("https://apis.datos.gob.ar/georef/api/provincias")
+        .then(function(respuesta){
+          return respuesta.json();
+        })
+        .then(function(data){
+          for (provincia of data.provincias) {
+            var optionProvincia = document.createElement('option');
+            var textoProvincia = document.createTextNode(provincia.nombre);
+            optionProvincia.appendChild(textoProvincia);
+            optionProvincia.setAttribute('value', provincia.id)
+            console.log(optionProvincia);
+            selectProvincia.appendChild(optionProvincia);
+            divProv.appendChild(selectProvincia);
+          }
+        })
+      }
+    }
