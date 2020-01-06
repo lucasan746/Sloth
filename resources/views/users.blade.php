@@ -1,15 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
+        <div class="card-group">
     @foreach ($users as $user)
-        <div class="card">
-<a class="busquedas" href="perfil/{{$user->id}}">
-          <div class="container">
-            <h4 class="titit"><b>{{$user->user}}</b></h4>
-            <img class="imgbusq"src="/storage/{{$user->fotoperfil}}" alt="">
-          </div>
-          </a>
-        </div>
-<br><br>
+
+    <div class="card m-2">
+      <a href="#"><img src="storage/{{$user->fotoperfil}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{$user->user}}</h5>
+        <p class="card-text">{{$user->nombre." ".$user->apellido}}</p>
+      </div></a>
+    </div>
+
     @endforeach
+      </div>
 @endsection
