@@ -7,19 +7,22 @@
 
   <section class="seccionizq">
     <div class=" cajaposteo ">
-      <form class="" action="/publicacion" method="post" enctype="multipart/form-data">
+      <form class="" action="/publicacion" method="post" enctype="multipart/form-data" >
         {{csrf_field()}}
         <h4 class="card-header ">Crea una publicación</h4>
-          <textarea class="col-12 border-light p-3" name="text" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
-
+          <textarea id="textPost" class="col-12 border-light p-3" name="text" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
+          <img src="" alt="" id="preimg" height="200px" width="200px">
           <div class="image-upload ">
+            <p id="nombreimg"></p>
     <label for="file-input">
 
       <img src="/images/iconos/iconfile-2.png" alt ="foto" title ="foto" >
     </label>
         <input id="file-input" name="media" type="file"/>
+
+
         <input type="hidden" name="id" value="{{Auth::user()->id}}">
-      <button class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
+      <button id="formPost" class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
 </div>
 
 
@@ -145,4 +148,11 @@
     </footer>
   </section>
 </div>
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous">
+
+</script>
+<script src="js/post.js" charset="utf-8"></script>
 @endsection
