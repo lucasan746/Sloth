@@ -30,22 +30,21 @@ document.querySelector('.lights').onclick = function(event){
   if (perfil) {
   perfil.classList.toggle('perfil-tema');
   botonHome.classList.toggle('pink');
-  perfilamigo.classList.toggle('pink');
   }
   if (boton) {
     fotoperfil.classList.toggle('pink');
     boton.classList.toggle('pink');
     botonBorrar.classList.toggle('pink');
-    cajaperfil.classList.toggle('pink');
-    perfilamigo.classList.toggle('pink');
   }
   if (posteo) {
     posteo.classList.toggle('pink');
   }
-  // if (cajaperfil) {
-  //   cajaperfil.classList.toggle('pink');
-  //   perfilamigo.classList.toggle('pink');
-  // }
+  if (cajaperfil) {
+    cajaperfil.classList.toggle('pink');
+  }
+  if (perfilamigo) {
+    perfilamigo.classList.toggle('pink');
+  }
   if (seguir) {
     seguir.classList.toggle('pink');
   }
@@ -60,26 +59,24 @@ if (localStorage.theme=='true') {
   if (perfil) {
   perfil.classList.toggle('perfil-tema');
   botonHome.classList.toggle('pink');
-  perfilamigo.classList.toggle('pink');
   }
   if (boton) {
     fotoperfil.classList.toggle('pink');
     boton.classList.toggle('pink');
     botonBorrar.classList.toggle('pink');
-    cajaperfil.classList.toggle('pink');
-    perfilamigo.classList.toggle('pink');
   }
   if (posteo) {
     posteo.classList.toggle('pink');
   }
-  // if (cajaperfil) {
-  //   cajaperfil.classList.toggle('pink');
-  //   perfilamigo.classList.toggle('pink');
-  // }
+  if (cajaperfil) {
+    cajaperfil.classList.toggle('pink');
+  }
   if (seguir) {
     seguir.classList.toggle('pink');
   }
-
+  if (perfilamigo) {
+    perfilamigo.classList.toggle('pink');
+  }
 
 }
 console.log(cajaperfil);
