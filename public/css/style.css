@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 0;
 }
+.navphone{
+  display: none;
+}
 /* Tema */
 :root{
   --perfil:white;
@@ -1856,6 +1859,7 @@ margin-right: 2px;
     width: 90vw;
   }
   /* home */
+
   .seccionizq{
     position: static;
     margin: auto;
@@ -2094,13 +2098,53 @@ width: 68px;
     display: none;
   }
   /* home */
+  .icon{
+    display: none;
+  }
+  .navphone{
+    display: inherit;
+    position: fixed;
+    height: 56px;
+    background-color:var(--color-bg);
+    z-index: 5;
+    bottom: 0;
+  }
+  .descrip1{
+    display: none;
+  }
+  .hacer-comentario{
+    display: none;
+  }
+  .icon-comm{
+    margin-right: 60%;
+  }
+  .homepost .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
   .iconosderecha{
     display: flex;
+    margin-top: 10px;
 
   }
+  .busqueda{
+    left: 23%;
+    width: 50%;
+    top: 2%;
+  }
+
+  .lights{
+    position: absolute;
+    right: 5px;
+    top: -5px;
+  }
   .iconosderecha img{
-    margin-top: 10px;
     position:static;
+  }
+  .iconosderecha .logohome{
+    position: absolute;
+    left: 5px;
+    top: -10px;
   }
 .navbar{
   display: none;
