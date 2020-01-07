@@ -89,9 +89,9 @@
   @endforeach
 </section>
 @php
-  $al=rand(1,count($posteos));
-  $al2=rand(1,count($posteos));
-  $al3=rand(1,count($posteos));
+  $al=rand(0,count($posteos)-1);
+  $al2=rand(0,count($posteos)-1);
+  $al3=rand(0,count($posteos)-1);
 @endphp
 
   {{-- Seccion derecha--}}
