@@ -22,6 +22,9 @@
               <button type="submit" name="button" hidden >buscar!</button>
 
             </form>
+            <div class="control lights">
+  <a href="#"><img src="https://img.icons8.com/color/48/000000/sloth.png"></a>
+</div>
              <a href="#"><img src="../images/iconos/usuario.png" alt="solicitudes" class="icon-solicitud"></a>
           <a href="#"><img src="../images/iconos/bocadillo.png" alt="mensajes" class="icon-mensaje"></a>
               <a href="#">  <img src="../images/iconos/notificacion.png" alt="notificaciones" class="icon-notif"></a>
@@ -40,6 +43,6 @@
     <br><br><br><br><br>
 
   @yield('content')
-
+  <script src="../js/theme.js" charset="utf-8"></script>
   </body>
 </html>

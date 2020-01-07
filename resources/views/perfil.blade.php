@@ -51,7 +51,7 @@
       </label>
           <input id="file-input" name="media" type="file"/>
           <input type="hidden" name="id" value="{{Auth::user()->id}}">
-        <button class="botonpost btn btn-primary" type="submit" name="button">Publicar</button>
+        <button class="botonpost btn btn-primary" type="submit" name="button" id="botonpost">Publicar</button>
   </div>
         </form>
     </div>
@@ -60,30 +60,35 @@
       @else
       @isset($amigo->id)
       @if ($follow==$amigo->id)
-      <p>Ya sigues a este usuario</p>
-      <form class="" action="/unfollow" method="post"  enctype="multipart/form-data">
-        @csrf
-        <input type="hidden" name="id_amigo" value="{{$follow}}">
-        <input type="hidden" name="seguir" value="{{$perfil->id}}">
-        <button class="btn btn-primary" type="submit" name="button">Dejar de seguir</button>
-      </form>
+      <div class="seguir">
+        <p>Ya sigues a este usuario</p>
+        <form class="" action="/unfollow" method="post"  enctype="multipart/form-data">
+          @csrf
+          <input type="hidden" name="id_amigo" value="{{$follow}}">
+          <input type="hidden" name="seguir" value="{{$perfil->id}}">
+          <button id="seguir"class="btn btn-primary" type="submit" name="button">Dejar de seguir</button>
+        </form>
+      </div>
       @else
         <form class="" action="/follow" method="post"  enctype="multipart/form-data">
           @csrf
           <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
           <input type="hidden" name="seguir" value="{{$perfil->id}}">
-          <button class="btn btn-primary" type="submit" name="button">Seguir a este usuario</button>
+          <button id="seguir"class="btn btn-primary" type="submit" name="button">Seguir a este usuario</button>
         </form>
       @endif
       @endisset
       @if (isset($amigo->id))
       @else
-      <form class="" action="/follow" method="post"  enctype="multipart/form-data">
-        @csrf
-        <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
-        <input type="hidden" name="seguir" value="{{$perfil->id}}">
-        <button class="btn btn-primary" type="submit" name="button">Seguir a este usuario</button>
-      </form>
+      <div class="seguir">
+        <form class="" action="/follow" method="post"  enctype="multipart/form-data">
+          @csrf
+          <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
+          <input type="hidden" name="seguir" value="{{$perfil->id}}">
+          <button id="seguir"class="btn btn-primary" type="submit" name="button">Seguir a este usuario</button>
+        </form>
+
+      </div>
       @endif
       @endif
 
@@ -98,7 +103,7 @@
             @csrf
             <input type="hidden" name="id_post" value="{{$post->id}}">
             <input type="hidden" name="perfil" value="{{Auth::user()->id}}">
-            <button class="botonpost btn btn-primary" type="submit" name="button">Borrar</button>
+            <button class="botonpost btn btn-primary" type="submit" name="button" id="botonBorrar">Borrar</button>
           </form>
         @endif
       </header>
@@ -108,9 +113,9 @@
     <div class="descrip">
     <section>
       <div class="iconslikes">
-        <img class="icon-like" src="images/iconos/like.png" alt="" width="30px">
-        <img class="icon-comm" src="images/iconos/comment.png" alt="" width="30px">
-        <img class="icon-share" src="images/iconos/share.png" alt="" width="30px">
+        <img class="icon-like" src="../images/iconos/like.png" alt="" width="30px">
+        <img class="icon-comm" src="../images/iconos/comment.png" alt="" width="30px">
+        <img class="icon-share" src="../images/iconos/share.png" alt="" width="30px">
       </div>
     </section>
     <div class="descrip1">
@@ -172,5 +177,4 @@
       </footer>
     </section>
   </div>
-
 @endsection

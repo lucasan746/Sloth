@@ -6,7 +6,10 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ :root{
+   --color-bg:#7d5bb9;
 
+ }
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -2896,8 +2899,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #7d5bb9;
-  border-color: #7d5bb9;
+  background-color:var(--color-bg);
+  border-color:var(--color-bg);
 }
 
 .btn-primary:hover {

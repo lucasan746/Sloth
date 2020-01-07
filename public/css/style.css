@@ -3,8 +3,21 @@
   margin: 0 auto;
   padding: 0;
 }
-/* busqueda de perfiles */
+/* Tema */
+:root{
+  --perfil:white;
 
+}
+.lights img{
+  position: absolute;
+  right: 40%;
+}
+.pink{
+  --color-bg:pink;
+}
+.perfil-tema{
+  --perfil:pink;
+}
 /* fin */
 .bar{
   background-color: inherit;
@@ -1338,13 +1351,13 @@ font-size: 0.9rem;
 .navhome{
   position: fixed;
   height: 56px;
-  background-color:#7d5bb9;
+  background-color:var(--color-bg);
   z-index: 5;
 }
 .navbar2{
   position: fixed;
   height: 56px;
-  background-color:#7d5bb9;
+  background-color:var(--color-bg);
   z-index: 5;
 }
 .logohome{
@@ -1467,7 +1480,7 @@ top: 10px;
 }
 .cajaposteo{
   margin-bottom: 40px;
-  border: 1px solid #d8c0ff;
+  border: 1px solid var(--color-bg);
   background-color: white;
 }
 
@@ -1545,8 +1558,11 @@ position: absolute;
 margin-left: 10px;
 top: 21px;
 }
+.seguir{
+  margin-bottom: 20px;
+}
 .perfilamigo{
-  border: solid 1px #d8c0ff;
+  border: solid 1px var(--color-bg);
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -1616,7 +1632,7 @@ top: 21px;
 /* Seccion 2 */
 .perfilderecha{
   position: relative;
-  background-color: white;
+  background-color:var(--perfil);
  border-radius: 5px;
  border: 1px solid #d8c0ff;
  margin-bottom: 20px;
@@ -1670,7 +1686,7 @@ left: 64px;
   font-size: 0.8rem;
 }
 .botonseg{
-  color:#7d5bb9;
+  color:var(--color-bg);
   right: 2px;
     position: absolute;
 }
@@ -1729,10 +1745,10 @@ left: 62px;
 .cajaperfil{
   background-color: white;
   margin-bottom: 40px;
-    border: 1px solid #d8c0ff;
+    border: 1px solid var(--color-bg);
 }
 .desperfil img{
-  border:3px solid #7d5bb9;
+  border:3px solid var(--color-bg);
 }
 
 .publicidad{
