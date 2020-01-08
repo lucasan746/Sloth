@@ -74,7 +74,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                     <div class="card mt-3">
                         <h5 class="card-header headerreg col-md-12">{{ __('Unete a Sloth!') }}</h5>
                         <div class="card-body cardbodyreg ">
-                            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                            <form id="formulario" name="for"method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row justify-content-around">
                                     <div class="form-group col-6">
@@ -223,7 +223,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                         </div>
                         <div class="form-group row ">
                             <div class="col-md-6">
-                                <button type="submit" class="btn btn-secondary btn-lg btn-block botonform">
+                                <button onclick="save()" id="sub" type="submit" class="btn btn-secondary btn-lg btn-block botonform">
                                     {{ __('Registrate') }}
                                 </button>
                             </div>

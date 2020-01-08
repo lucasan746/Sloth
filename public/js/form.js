@@ -21,8 +21,15 @@ let errorEm=document.getElementById('errorEm');
 let errorCon=document.getElementById('errorCon');
 let errorConCon=document.getElementById('errorConCon');
 let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-  console.log( inputNombre);
-
+  let validacion= false;
+  formulario.onchange=function() {
+    if (inputNombre.value.length<=2||inputApellido.value.length<=2||inputUser.value.length==''||regexEmail.test(inputEmail.value)==false||inputContra.value.length<=8||inputConfCon.value!=inputContra.value) {
+      validacion=false;
+    }
+    else {
+      validacion=true;
+    }
+  }
 inputNombre.onchange=function(){
     if (inputNombre.value.length<=2) {
       inputNombre.setAttribute('class','form-control is-invalid');
@@ -103,6 +110,17 @@ inputNombre.onchange=function(){
     }
     else {
       inputConfCon.setAttribute('class', 'form-control is-valid');
+    }
+  }
+  formulario.onsubmit=function(e){
+    e.preventDefault();
+  }
+  function save() {
+    if (validacion==true) {
+      document.for.submit();
+    }
+    else {
+      console.log('errores');
     }
   }
 
