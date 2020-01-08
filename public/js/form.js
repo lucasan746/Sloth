@@ -27,7 +27,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputNombre.value.length<=2) {
       inputNombre.setAttribute('class','form-control is-invalid');
       if (errorNomb.textContent=='') {
-        let mensajeNombre= document.createTextNode('El nombre demasiado corto');
+        let mensajeNombre= document.createTextNode('El nombre es demasiado corto');
         errorNomb.appendChild(mensajeNombre);
       }
 
@@ -82,7 +82,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
       inputContra.setAttribute('class','form-control is-invalid');
       if (errorCon.textContent=='') {
-        let mensajeCon = document.createTextNode('La contraseña debe tener como minimo 8 caracteres');
+        let mensajeCon = document.createTextNode('La contraseña debe tener 8 caracteres');
         errorCon.appendChild(mensajeCon);
       }
     }
@@ -109,6 +109,9 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     e.preventDefault();
   }
 
+// divProv.onchange=function(){
+//   divProv.setAttribute('class','custom-select')
+// }
   // APi
 
   fetch('https://restcountries.eu/rest/v2')
@@ -130,6 +133,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       console.log(paisElegido);
       if (paisElegido == "AR") {
         let selectProvincia = document.createElement('select');
+        selectProvincia.setAttribute('class','custom-select');
         fetch("https://apis.datos.gob.ar/georef/api/provincias")
         .then(function(respuesta){
           return respuesta.json();

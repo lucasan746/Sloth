@@ -87,7 +87,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
-                                        <p id="errorNomb" class="invalid-feedback"></p>
+                                        <p id="errorNomb"  class="invalid-feedback"></p>
                                     </div>
                                     {{-- apellido --}}
 
@@ -113,7 +113,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
-                                        <p id="errorUser" class="invalid-feedback"></p>
+                                        <p id="errorUser"  class="invalid-feedback"></p>
                                     </div>
                                     {{-- email --}}
 
