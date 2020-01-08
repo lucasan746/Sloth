@@ -734,9 +734,7 @@ font-family: 'Montserrat', sans-serif;
 }
 .nav-forms{
   position: relative;
-
 }
-
 
 .headerreg{
   background-color: #8665ed;
@@ -745,7 +743,7 @@ font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
 }
 .cardreg{
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 .cardbodyreg{

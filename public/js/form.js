@@ -68,7 +68,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (regexEmail.test(inputEmail.value)==false) {
       inputEmail.setAttribute('class','form-control is-invalid');
       if (errorEm.textContent=='') {
-        let mensajeEm= document.createTextNode('El email es invalido');
+        let mensajeEm= document.createTextNode('El email es inválido');
         errorEm.appendChild(mensajeEm)
       }
     }
@@ -96,7 +96,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputConfCon.value!=inputContra.value) {
       inputConfCon.setAttribute('class','form-control is-invalid');
       if (errorConCon.textContent=='') {
-        let mensajeCofCon = document.createTextNode('Las contraseñas no coinciden');
+        let mensajeCofCon = document.createTextNode('La contraseña no coincide');
         errorConCon.appendChild(mensajeCofCon);
       }
 
@@ -109,9 +109,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     e.preventDefault();
   }
 
-// divProv.onchange=function(){
-//   divProv.setAttribute('class','custom-select')
-// }
+
   // APi
 
   fetch('https://restcountries.eu/rest/v2')
