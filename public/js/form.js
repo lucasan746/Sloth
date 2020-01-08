@@ -105,9 +105,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       inputConfCon.setAttribute('class', 'form-control is-valid');
     }
   }
-  formulario.onsubmit=function(e){
-    e.preventDefault();
-  }
+
 
   // APi
 
@@ -130,6 +128,8 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       console.log(paisElegido);
       if (paisElegido == "AR") {
         let selectProvincia = document.createElement('select');
+        selectProvincia.classList.toggle('custom-select');
+        selectProvincia.classList.toggle('provincia');
         fetch("https://apis.datos.gob.ar/georef/api/provincias")
         .then(function(respuesta){
           return respuesta.json();
@@ -145,5 +145,9 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
             divProv.appendChild(selectProvincia);
           }
         })
+      }
+      else {
+        let provincia = document.querySelector('.provincia');
+        provincia.parentNode.removeChild(provincia);
       }
     }
