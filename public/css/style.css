@@ -1993,6 +1993,11 @@ height: 75vh;
 /* Celular */
 
 @media screen and (max-width: 480px){
+  /* perfil */
+  .imgperfil{
+    width: 20vw;
+    height: 20vw;
+  }
   /*registro mascota */
 .cajalogin3{
     background-color: #fafbff;

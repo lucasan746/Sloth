@@ -2,7 +2,8 @@
 
 @section('content')
   {{-- Perfil // Trae variable con un usuario ($perfil)  --}}
-  <div class="row justify-content-center col-9">
+  <div class='homepost'>
+  <div class="row justify-content-center col-12">
 
     <section class="seccionizq ">
       <div class="row  cajaperfil  ">
@@ -177,4 +178,5 @@
       </footer>
     </section>
   </div>
+</div>
 @endsection
