@@ -23,7 +23,7 @@ let errorConCon=document.getElementById('errorConCon');
 let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
   console.log( inputNombre);
 
-  inputNombre.onchange=function(){
+inputNombre.onchange=function(){
     if (inputNombre.value.length<=2) {
       inputNombre.setAttribute('class','form-control is-invalid');
       if (errorNomb.textContent=='') {
@@ -105,8 +105,6 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       inputConfCon.setAttribute('class', 'form-control is-valid');
     }
   }
-
-
 
   // APi
 

@@ -157,5 +157,4 @@
 			  crossorigin="anonymous">
 
 </script>
-<script src="js/post.js" charset="utf-8"></script>
 @endsection

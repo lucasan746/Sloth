@@ -1,5 +1,6 @@
 console.log('tema');
 let barra = document.querySelector('.navhome');
+let barraphone = document.querySelector('.navphone');
 let perfil = document.querySelector('.perfilderecha');
 let fotoperfil = document.querySelector('.imgperfil');
 let boton =document.querySelector('#botonpost');
@@ -9,7 +10,7 @@ let perfilamigo = document.querySelector('.perfilamigo');
 let botonHome =document.querySelector('#formPost');
 let botonBorrar =document.querySelector('#botonBorrar');
 let camera = document.querySelector('.image-upload img');
-let seguir =document.querySelector('#seguir')
+let seguir =document.querySelector('#seguir');
 document.querySelector('.lights').onclick = function(event){
   event.preventDefault();
   if (localStorage.theme=='true') {
@@ -27,6 +28,7 @@ document.querySelector('.lights').onclick = function(event){
 
   console.log(localStorage.theme);
   barra.classList.toggle('pink');
+  barraphone.classList.toggle('pink');
   if (perfil) {
   perfil.classList.toggle('perfil-tema');
   botonHome.classList.toggle('pink');
@@ -56,6 +58,7 @@ if (localStorage.theme=='true') {
       camera.src='/images/iconos/camera.png';
     }
   barra.classList.toggle('pink');
+  barraphone.classList.toggle('pink');
   if (perfil) {
   perfil.classList.toggle('perfil-tema');
   botonHome.classList.toggle('pink');

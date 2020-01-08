@@ -44,7 +44,7 @@
           {{csrf_field()}}
           <h4 class="card-header ">Crea una publicación</h4>
             <textarea class="col-12 border-light p-3" name="text" rows="3" cols="80" placeholder="¿Qué estas pensando?"></textarea>
-
+            <img src="" alt="" id="preimg" height="200px" width="200px">
             <div class="image-upload ">
       <label for="file-input">
 

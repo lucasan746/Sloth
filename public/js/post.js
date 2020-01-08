@@ -1,6 +1,4 @@
-$(document).ready(function() {
-  console.log('funcionando...');
-});
+
 const formPost = document.querySelector('#formPost');
 const $seleccionArchivos = document.querySelector("#file-input"),
   $imagenPrevisualizacion = document.querySelector("#preimg");
@@ -25,4 +23,3 @@ $seleccionArchivos.addEventListener('change', ()=>{
     formPost.preventDefault();
   }
 });
-console.log(formPost);
