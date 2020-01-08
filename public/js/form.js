@@ -27,7 +27,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputNombre.value.length<=2) {
       inputNombre.setAttribute('class','form-control is-invalid');
       if (errorNomb.textContent=='') {
-        let mensajeNombre= document.createTextNode('El nombre demasiado corto');
+        let mensajeNombre= document.createTextNode('El nombre es demasiado corto');
         errorNomb.appendChild(mensajeNombre);
       }
 
@@ -68,7 +68,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (regexEmail.test(inputEmail.value)==false) {
       inputEmail.setAttribute('class','form-control is-invalid');
       if (errorEm.textContent=='') {
-        let mensajeEm= document.createTextNode('El email es invalido');
+        let mensajeEm= document.createTextNode('El email es inválido');
         errorEm.appendChild(mensajeEm)
       }
     }
@@ -82,7 +82,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 
       inputContra.setAttribute('class','form-control is-invalid');
       if (errorCon.textContent=='') {
-        let mensajeCon = document.createTextNode('La contraseña debe tener como minimo 8 caracteres');
+        let mensajeCon = document.createTextNode('La contraseña debe tener 8 caracteres');
         errorCon.appendChild(mensajeCon);
       }
     }
@@ -96,7 +96,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (inputConfCon.value!=inputContra.value) {
       inputConfCon.setAttribute('class','form-control is-invalid');
       if (errorConCon.textContent=='') {
-        let mensajeCofCon = document.createTextNode('Las contraseñas no coinciden');
+        let mensajeCofCon = document.createTextNode('La contraseña no coincide');
         errorConCon.appendChild(mensajeCofCon);
       }
 
@@ -105,6 +105,7 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       inputConfCon.setAttribute('class', 'form-control is-valid');
     }
   }
+
 
 
   // APi
@@ -128,7 +129,8 @@ let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
       console.log(paisElegido);
       if (paisElegido == "AR") {
         let selectProvincia = document.createElement('select');
-        selectProvincia.classList.toggle('custom-select');
+        selectProvincia.setAttribute('class','custom-select');
+        // selectProvincia.classList.toggle('custom-select');
         selectProvincia.classList.toggle('provincia');
         fetch("https://apis.datos.gob.ar/georef/api/provincias")
         .then(function(respuesta){
