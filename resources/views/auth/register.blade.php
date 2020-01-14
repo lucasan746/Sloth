@@ -70,18 +70,18 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
     <section class="cajareg">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 cardreg">
+                <div class="col-md-12 col-lg-6 cardreg" id="register">
                     <div class="card mt-3">
                         <h5 class="card-header headerreg col-md-12">{{ __('Unete a Sloth!') }}</h5>
                         <div class="card-body cardbodyreg ">
                             <form id="formulario" name="for"method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="row justify-content-around">
+                                <div class="row justify-content-around" id="none">
                                     <div class="form-group col-6">
                                       {{-- Nombre --}}
 
                                         <label for="nombre" class="col-form-label text-md-right">{{ __('Nombre') }}</label>
-                                        <input id="nombre" type="text" class="form-control @error('name') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+                                        <input id="nombre" type="text" class="form-control @error('name') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" autocomplete="nombre" autofocus>
                                         @error('nombre')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -93,7 +93,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
 
                                     <div class="form-group col-6 ">
                                         <label for="apellido" class="col-form-label text-md-right">{{ __('Apellido') }}</label>
-                                        <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
+                                        <input id="apellido" type="text" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" autocomplete="apellido" autofocus>
                                         @error('apellido')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -105,7 +105,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                 {{-- Usuario --}}
 
                                 <div class="row justify-content-around">
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-12 col-md-6">
                                         <label for="usuario" class="col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
                                         <input id="user" type="text" class="form-control @error('usuario') is-invalid @enderror" name="user" value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
                                         @error('user')
@@ -117,7 +117,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                     </div>
                                     {{-- email --}}
 
-                                    <div class="form-group col-6 ">
+                                    <div class="form-group col-12 col-md-6">
                                         <label for="email" class="col-form-label text-md-right">{{ __('Correo electrónico') }}</label>
                                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                         @error('email')
@@ -131,7 +131,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                 {{-- Contraseña --}}
 
                                 <div class="row justify-content-around">
-                                    <div class="form-group col-6 ">
+                                    <div class="form-group col-12 col-md-6">
                                         <label for="contraseña" class="col-form-label text-md-right">{{ __('Contraseña') }}</label>
                                         <input id="contraseña" type="password" class="form-control  @error('contraseña') is-invalid @enderror" name="contraseña" required autocomplete="contraseña">
                                         @error('contraseña')
@@ -141,7 +141,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         @enderror
                                         <p id="errorCon" class="invalid-feedback"></p>
                                     </div>
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-12 col-md-6">
                                         <label for="confcontra" class="col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
                                         <input id="confcontra" type="password" class="form-control @error('contraseña_confirmation') is-invalid @enderror" name="contraseña_confirmation" required autocomplete="confcontra">
                                         @error('contraseña_confirmation')
@@ -154,7 +154,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                 </div>
 
                                 {{-- Sexo  --}}
-                                <div class="row justify-content-around">
+                                <div class="row justify-content-around" id="none">
 
                                     <div class="form-group row col-5 ">
                                         <label for="genero" class="col-form-label text-md-right">{{ __('Genero') }}</label>
@@ -177,8 +177,8 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                         </div>
                                     </div>
                                 </div>
-                                <label for="cumpleanos" class="col-form-label text-md-right">{{ __('Cumpleaños') }}</label>
-                                <div class="row justify-content-around">
+                                <label id="none" for="cumpleanos" class="col-form-label text-md-right">{{ __('Cumpleaños') }}</label>
+                                <div class="row justify-content-around" id="none">
 
                                     <div class="form-group row col-4">
 
@@ -216,7 +216,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
                                 <div class="input-group">
                                     <div class="custom-file divfotoreg">
                                         <input type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es" required>
-                                        <label class="custom-file-label" for="sube foto">Sube una foto tuya o de tu mascota</label>
+                                        <label class="custom-file-label" for="sube foto">¡Sube una foto!</label>
                                     </div>
 
                                 </div>

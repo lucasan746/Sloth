@@ -20,11 +20,11 @@ class CreateUserTable extends Migration
             $table->string('nombre',100);
             $table->string('apellido',100);
             $table->string('email',100);
-            $table->string('sexo',1);
-            $table->string('pais',100);
+            $table->string('sexo',1)->nullable();
+            $table->string('pais',100)->nullable();
             $table->string('fotoperfil',100);
             $table->string('password',100);
-            $table->string('fecha',100);
+            $table->string('fecha',100)->nullable();
         });
     }
 

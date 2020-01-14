@@ -23,7 +23,7 @@ let errorConCon=document.getElementById('errorConCon');
 let regexEmail=(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
   let validacion= false;
   formulario.onchange=function() {
-    if (inputNombre.value.length<=2||inputApellido.value.length<=2||inputUser.value.length==''||regexEmail.test(inputEmail.value)==false||inputContra.value.length<=8||inputConfCon.value!=inputContra.value) {
+    if (inputUser.value.length==''||regexEmail.test(inputEmail.value)==false||inputContra.value.length<=8||inputConfCon.value!=inputContra.value) {
       validacion=false;
     }
     else {

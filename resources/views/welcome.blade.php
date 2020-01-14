@@ -119,7 +119,7 @@ $vidalea=rand(0,3);
                 <li><a href="#">Legales</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#">Privacidad</a></li>
-                <li><a href="{{ url('/preguntas') }}">Preguntas frecuentes</a></li>
+                <li><a href="{{ url('/preguntas') }}">FAQ</a></li>
             </ul>
         </footer>
     </div>

@@ -551,7 +551,7 @@ padding: 10px;
 
 }
 .foot li{
-  margin: 0 10px;
+  margin: 0 1vw;
 }
 .foot a{
   text-decoration: none;
@@ -1839,7 +1839,7 @@ margin-right: 2px;
 
   }
   .vid{
-    width: 40vw;
+    width: 70vw;
   }
   .container{
     text-align: center;
@@ -1886,7 +1886,7 @@ margin-right: 2px;
   display: none;
 }
 .vid{
-  width: 40vw;
+  width: 70vw;
 }
 .iconoprin{
   width: 8vw;
@@ -1993,6 +1993,13 @@ height: 75vh;
 /* Celular */
 
 @media screen and (max-width: 480px){
+  /* register */
+  #register{
+    margin-top: 15vh;
+  }
+  #none{
+    display: none;
+  }
   /* perfil */
   .imgperfil{
     width: 20vw;
@@ -2097,7 +2104,7 @@ width: 68px;
   /* index */
 
   .vid{
-    width: 65vw;
+    width: 100vw;
   }
   .iconoprin{
     display: none;
@@ -2313,7 +2320,7 @@ left: 5%;
   display: none;
 }
 .vid{
-  width: 65vw;
+  width: 100vw;
 }
 .data1{
   width: 90Vw;

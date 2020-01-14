@@ -111,7 +111,7 @@
 
 
 
-        <div class="perfilsuge">
+        {{-- <div class="perfilsuge">
         <ul>
           <img class="img" src="/storage/{{$posteos[$al2]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
           <a href="perfil/{{$posteos[$al2]->user->id}}"><h4>{{$posteos[$al2]->user->user}}</h4></a>
@@ -131,7 +131,7 @@
           <a href="perfil/{{$posteos[$al3]->user->id}}"><h4>{{$posteos[$al3]->user->user}}</h4></a>
           <p class="textsuge2"><small class="text-muted">En linea</small></p>
             </div>
-        </ul>
+        </ul> --}}
       </article>
 
 
