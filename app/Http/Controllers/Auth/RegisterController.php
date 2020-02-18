@@ -64,7 +64,7 @@ class RegisterController extends Controller
             'fotoperfil'=>['required','file','image'],
         ]);
 
-      $this->validate($data);
+        $this->validate($data);
     }
 
     /**
@@ -75,10 +75,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      $request=request();
-      $ruta=$request->file('fotoperfil')->store('public');
-      $image=basename($ruta);
-      $fecha=$data['dia']."/".$data['mes']."/".$data["año"];
+        $request=request();
+        $ruta=$request->file('fotoperfil')->store('public');
+        $image=basename($ruta);
+        $fecha=$data['dia']."/".$data['mes']."/".$data["año"];
         return User::create([
             'nombre' => $data['nombre'],
             'apellido'=>$data['apellido'],
