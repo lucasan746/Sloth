@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'fotoperfil'=>['required','file','image'],
         ]);
 
-      $this->validate($data);
+        $this->validate($data);
     }
 
     /**
