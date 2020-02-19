@@ -8,7 +8,7 @@
     <section class="seccionizq ">
       <div class="row  cajaperfil  ">
         <div class="col-4 mt-3 mb-3 desperfil" >
-          <img src="/storage/{{ $perfil->fotoperfil }}" alt="fotodeperfil" width="200px" height="200px" class="imgperfil">
+          <img src="/fotos/{{ $perfil->fotoperfil }}" alt="fotodeperfil" width="200px" height="200px" class="imgperfil">
       </div>
 
           <div class="col-7 m-auto dataperfil">
@@ -50,7 +50,7 @@
 
         <img src="/images/iconos/iconfile-2.png" alt ="foto" title ="foto" >
       </label>
-          <input id="file-input" name="media" type="file"/>
+          <input id="file-input" name="media" required type="file"/>
           <input type="hidden" name="id" value="{{Auth::user()->id}}">
         <button class="botonpost btn btn-primary" type="submit" name="button" id="botonpost">Publicar</button>
   </div>
@@ -97,7 +97,7 @@
       @foreach ($perfil->post as $post)
   <article class="perfilamigo ">
       <header class="headerperfil">
-        <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
+        <a href="perfil/{{$post->user->id}}"><img src="/fotos/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
         <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
         @if ($post->user_id==Auth::user()->id)
           <form class="" action="/eliminar" method="post"  enctype="multipart/form-data">
@@ -109,7 +109,7 @@
         @endif
       </header>
     <div class="imagenpefiles">
-      <img src="/storage/{{$post->imagenVideo}}" alt="" width="100%" >
+      <img src="/publicaciones/{{$post->imagenVideo}}" alt="" width="100%" >
     </div>
     <div class="descrip">
     <section>

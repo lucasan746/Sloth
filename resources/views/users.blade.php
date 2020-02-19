@@ -5,7 +5,7 @@
     @foreach ($users as $user)
 
     <div class="card m-2">
-      <a href="perfil/{{$user->id}}"><img src="storage/{{$user->fotoperfil}}" class="card-img-top" alt="...">
+      <a href="perfil/{{$user->id}}"><img src="/fotos/{{$user->fotoperfil}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{$user->user}}</h5>
         <p class="card-text">{{$user->nombre." ".$user->apellido}}</p>

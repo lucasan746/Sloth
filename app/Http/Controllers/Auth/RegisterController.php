@@ -69,8 +69,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
       $request=request();
-      $ruta=$request->file('fotoperfil')->store('public');
-      $image=basename($ruta);
+      $image = $request->file('fotoperfil');
+      $ruta=public_path().'/fotos';
+      $fileName=uniqid().$image->getClientOriginalName();
+      $image->move($ruta,$fileName);
       $fecha=$data['dia']."/".$data['mes']."/".$data["año"];
       if (strlen($data['nombre'])==0) {
         $data['nombre']='User';
@@ -86,7 +88,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['contraseña']),
             'pais'=> $data["pais"],
-            'fotoperfil'=>$image,
+            'fotoperfil'=>$fileName,
             'fecha'=>$fecha
 
         ]);

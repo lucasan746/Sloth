@@ -1,28 +1,4 @@
 @php
-// $pais = [
-// "Arg" => "Argentina",
-// "Bol" => "Bolivia",
-// "Chi" => "Chile",
-// "Col" => "Colombia",
-// "Cos" => "Costa Rica",
-// "Cub" => "Cuba",
-// "Ecu" => "Ecuador",
-// "Sal" => "El Salvador",
-// "Esp" => "España",
-// "Gua" => "Guatemala",
-// "Hon" => "Honduras",
-// "Mex" => "México",
-// "Nic" => "Nicaragua",
-// "Pan" => "Panamá",
-// "Par" => "Paraguay",
-// "Pue" => "Puerto Rico",
-// "Per" => "Perú",
-// "Dom" => "República Dominicana",
-// "Uru" => "Uruguay",
-// "Ven" => "Venezuela"
-//
-// ];
-
 $dia = array(1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
 
 $mes =[
@@ -215,7 +191,7 @@ $año= array(2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995,1994,19
 
                                 <div class="input-group">
                                     <div class="custom-file divfotoreg">
-                                        <input type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es" required>
+                                        <input accept="image/*" type="file" class="custom-file-input" id="fotoperfil" name="fotoperfil" aria-describedby="subefoto" lang="es" required>
                                         <label class="custom-file-label" for="sube foto">¡Sube una foto!</label>
                                     </div>
 

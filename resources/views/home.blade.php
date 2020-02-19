@@ -42,11 +42,11 @@
 
     <article class="perfilamigo ">
       <header class="headerperfil">
-        <a href="perfil/{{$post->user->id}}"><img src="/storage/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
+        <a href="perfil/{{$post->user->id}}"><img src="/fotos/{{$post->user->fotoperfil}}" alt="" width="50px" height="48px"></a>
         <a class="nombreperfil"href="perfil/{{$post->user->id}}"><h4>{{$post->user->user}}</h4></a>
       </header>
     <div class="imagenpefiles">
-      <img src="/storage/{{$post->imagenVideo}}" alt="" width="100%" >
+      <img src="/publicaciones/{{$post->imagenVideo}}" alt="" width="100%" >
     </div>
     <div class="descrip">
     <section>
@@ -99,7 +99,7 @@
     {{-- Seccion derecha--}}
     <section class="seccionder position-fixed">
       <div class="perfilderecha">
-        <img src="/storage/{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="fotoperfilderecha">
+        <img src="/fotos/{{Auth::user()->fotoperfil}}" alt="fotoperfil" class="fotoperfilderecha">
         <h4>{{Auth::user()->user}}</h4>
         <p class="textperfil"><small class="text-muted">En linea</small></p>
       </div>
@@ -111,27 +111,27 @@
 
 
 
-        {{-- <div class="perfilsuge">
+        <div class="perfilsuge">
         <ul>
-          <img class="img" src="/storage/{{$posteos[$al2]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+          <img class="img" src="/fotos/{{$posteos[$al2]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
           <a href="perfil/{{$posteos[$al2]->user->id}}"><h4>{{$posteos[$al2]->user->user}}</h4></a>
           <p class="textsuge"><small class="text-muted">En linea</small></p>
             </div>
         </ul>
         <div class="perfilsuge">
         <ul>
-          <img class="img" src="/storage/{{$posteos[$al]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+          <img class="img" src="/fotos/{{$posteos[$al]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
           <a href="perfil/{{$posteos[$al]->user->id}}"><h4>{{$posteos[$al]->user->user}}</h4></a>
           <p class="textsuge1"><small class="text-muted">En linea</small></p>
             </div>
         </ul>
         <div class="perfilsuge">
         <ul>
-          <img class="img" src="/storage/{{$posteos[$al3]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
+          <img class="img" src="/fotos/{{$posteos[$al3]->user->fotoperfil}}" alt="icono"width="50px" height="48px">
           <a href="perfil/{{$posteos[$al3]->user->id}}"><h4>{{$posteos[$al3]->user->user}}</h4></a>
           <p class="textsuge2"><small class="text-muted">En linea</small></p>
             </div>
-        </ul> --}}
+        </ul>
       </article>
 
 

@@ -9,24 +9,23 @@ use App\Post;
 
 class postController extends Controller
 {
-
-    function agregarPost(request $form)
+    public function agregarPost(request $form)
     {
-      $ruta=$form->file('media')->store('public');
-      $image=basename($ruta);
-      $nuevoPost= new Post();
-      $nuevoPost->text=$form["text"];
-      $nuevoPost->imagenVideo=$image;
-      $nuevoPost->user_id=$form["id"];
-      $nuevoPost->save();
-      return redirect('perfil/'.$form["id"]);
-
+        $image = $form->file('media');
+        $ruta=public_path().'/publicaciones';
+        $fileName=uniqid().$image->getClientOriginalName();
+        $image->move($ruta, $fileName);
+        $nuevoPost= new Post();
+        $nuevoPost->text=$form["text"];
+        $nuevoPost->imagenVideo=$fileName;
+        $nuevoPost->user_id=$form["id"];
+        $nuevoPost->save();
+        return redirect('perfil/'.$form["id"]);
     }
-    function borrarPost(request $form)
+    public function borrarPost(request $form)
     {
-      $unfollow=Post::find($form["id_post"]);
-      $unfollow->delete();
-      return redirect('perfil/'.$form["perfil"]);
+        $unfollow=Post::find($form["id_post"]);
+        $unfollow->delete();
+        return redirect('perfil/'.$form["perfil"]);
     }
-
 }
